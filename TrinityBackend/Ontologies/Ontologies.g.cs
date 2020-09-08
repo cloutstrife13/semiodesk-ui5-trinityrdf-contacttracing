@@ -1,12 +1,12 @@
 // Attention: This file is generated. Any modifications will eventually be overwritten.
-// Date: 06/09/2020 16:04:47
+// Date: 08/09/2020 17:34:44
 
 using System;
 using System.Collections.Generic;
 using System.Text;
 using Semiodesk.Trinity;
 
-namespace CWA_Graph
+namespace ContactTracingGraph
 {
 	
 ///<summary>
@@ -1479,84 +1479,852 @@ public static class OWL
 ///
 ///
 ///</summary>
-public class cwa : Ontology
+public class crt : Ontology
 {
-    public static readonly Uri Namespace = new Uri("http://www.sap-cwa-graph.com/rdf#");
+    public static readonly Uri Namespace = new Uri("http://www.covid-rdf-tracker.com/graph#");
     public static Uri GetNamespace() { return Namespace; }
     
-    public static readonly string Prefix = "cwa";
+    public static readonly string Prefix = "crt";
     public static string GetPrefix() { return Prefix; }     
 
     ///<summary>
     ///
-    ///<see cref="http://www.sap-cwa-graph.com/rdf"/>
+    ///<see cref="http://www.covid-rdf-tracker.com/graph"/>
     ///</summary>
-    public static readonly Resource rdf = new Resource(new Uri("http://www.sap-cwa-graph.com/rdf"));    
+    public static readonly Resource graph = new Resource(new Uri("http://www.covid-rdf-tracker.com/graph"));    
 
     ///<summary>
     ///
-    ///<see cref="http://www.sap-cwa-graph.com/rdf#code"/>
+    ///<see cref="http://www.covid-rdf-tracker.com/graph#BFLBQX"/>
     ///</summary>
-    public static readonly Property code = new Property(new Uri("http://www.sap-cwa-graph.com/rdf#code"));    
+    public static readonly Resource BFLBQX = new Resource(new Uri("http://www.covid-rdf-tracker.com/graph#BFLBQX"));    
 
     ///<summary>
     ///
-    ///<see cref="http://www.sap-cwa-graph.com/rdf#hasEncountered"/>
+    ///<see cref="http://www.covid-rdf-tracker.com/graph#BPZJGG"/>
     ///</summary>
-    public static readonly Property hasEncountered = new Property(new Uri("http://www.sap-cwa-graph.com/rdf#hasEncountered"));    
+    public static readonly Resource BPZJGG = new Resource(new Uri("http://www.covid-rdf-tracker.com/graph#BPZJGG"));    
 
     ///<summary>
     ///
-    ///<see cref="http://www.sap-cwa-graph.com/rdf#isInfected"/>
+    ///<see cref="http://www.covid-rdf-tracker.com/graph#BQKPSX"/>
     ///</summary>
-    public static readonly Property isInfected = new Property(new Uri("http://www.sap-cwa-graph.com/rdf#isInfected"));    
+    public static readonly Resource BQKPSX = new Resource(new Uri("http://www.covid-rdf-tracker.com/graph#BQKPSX"));    
 
     ///<summary>
     ///
-    ///<see cref="http://www.sap-cwa-graph.com/rdf#User"/>
+    ///<see cref="http://www.covid-rdf-tracker.com/graph#CDPVQF"/>
     ///</summary>
-    public static readonly Class User = new Class(new Uri("http://www.sap-cwa-graph.com/rdf#User"));
+    public static readonly Resource CDPVQF = new Resource(new Uri("http://www.covid-rdf-tracker.com/graph#CDPVQF"));    
+
+    ///<summary>
+    ///
+    ///<see cref="http://www.covid-rdf-tracker.com/graph#CKQSYV"/>
+    ///</summary>
+    public static readonly Resource CKQSYV = new Resource(new Uri("http://www.covid-rdf-tracker.com/graph#CKQSYV"));    
+
+    ///<summary>
+    ///
+    ///<see cref="http://www.covid-rdf-tracker.com/graph#CKXBAN"/>
+    ///</summary>
+    public static readonly Resource CKXBAN = new Resource(new Uri("http://www.covid-rdf-tracker.com/graph#CKXBAN"));    
+
+    ///<summary>
+    ///
+    ///<see cref="http://www.covid-rdf-tracker.com/graph#classification"/>
+    ///</summary>
+    public static readonly Property classification = new Property(new Uri("http://www.covid-rdf-tracker.com/graph#classification"));    
+
+    ///<summary>
+    ///
+    ///<see cref="http://www.covid-rdf-tracker.com/graph#CLCDJG"/>
+    ///</summary>
+    public static readonly Resource CLCDJG = new Resource(new Uri("http://www.covid-rdf-tracker.com/graph#CLCDJG"));    
+
+    ///<summary>
+    ///
+    ///<see cref="http://www.covid-rdf-tracker.com/graph#dateDiagnosed"/>
+    ///</summary>
+    public static readonly Property dateDiagnosed = new Property(new Uri("http://www.covid-rdf-tracker.com/graph#dateDiagnosed"));    
+
+    ///<summary>
+    ///
+    ///<see cref="http://www.covid-rdf-tracker.com/graph#dateEncountered"/>
+    ///</summary>
+    public static readonly Property dateEncountered = new Property(new Uri("http://www.covid-rdf-tracker.com/graph#dateEncountered"));    
+
+    ///<summary>
+    ///
+    ///<see cref="http://www.covid-rdf-tracker.com/graph#DEBER"/>
+    ///</summary>
+    public static readonly Resource DEBER = new Resource(new Uri("http://www.covid-rdf-tracker.com/graph#DEBER"));    
+
+    ///<summary>
+    ///
+    ///<see cref="http://www.covid-rdf-tracker.com/graph#DECGN"/>
+    ///</summary>
+    public static readonly Resource DECGN = new Resource(new Uri("http://www.covid-rdf-tracker.com/graph#DECGN"));    
+
+    ///<summary>
+    ///
+    ///<see cref="http://www.covid-rdf-tracker.com/graph#DEMUC"/>
+    ///</summary>
+    public static readonly Resource DEMUC = new Resource(new Uri("http://www.covid-rdf-tracker.com/graph#DEMUC"));    
+
+    ///<summary>
+    ///
+    ///<see cref="http://www.covid-rdf-tracker.com/graph#diagnosis"/>
+    ///</summary>
+    public static readonly Property diagnosis = new Property(new Uri("http://www.covid-rdf-tracker.com/graph#diagnosis"));    
+
+    ///<summary>
+    ///
+    ///<see cref="http://www.covid-rdf-tracker.com/graph#DSPHLW"/>
+    ///</summary>
+    public static readonly Resource DSPHLW = new Resource(new Uri("http://www.covid-rdf-tracker.com/graph#DSPHLW"));    
+
+    ///<summary>
+    ///
+    ///<see cref="http://www.covid-rdf-tracker.com/graph#DTRKNE"/>
+    ///</summary>
+    public static readonly Resource DTRKNE = new Resource(new Uri("http://www.covid-rdf-tracker.com/graph#DTRKNE"));    
+
+    ///<summary>
+    ///
+    ///<see cref="http://www.covid-rdf-tracker.com/graph#DUWDWN"/>
+    ///</summary>
+    public static readonly Resource DUWDWN = new Resource(new Uri("http://www.covid-rdf-tracker.com/graph#DUWDWN"));    
+
+    ///<summary>
+    ///
+    ///<see cref="http://www.covid-rdf-tracker.com/graph#EAFMKE"/>
+    ///</summary>
+    public static readonly Resource EAFMKE = new Resource(new Uri("http://www.covid-rdf-tracker.com/graph#EAFMKE"));    
+
+    ///<summary>
+    ///
+    ///<see cref="http://www.covid-rdf-tracker.com/graph#EKGFKJ"/>
+    ///</summary>
+    public static readonly Resource EKGFKJ = new Resource(new Uri("http://www.covid-rdf-tracker.com/graph#EKGFKJ"));    
+
+    ///<summary>
+    ///
+    ///<see cref="http://www.covid-rdf-tracker.com/graph#encounter"/>
+    ///</summary>
+    public static readonly Property encounter = new Property(new Uri("http://www.covid-rdf-tracker.com/graph#encounter"));    
+
+    ///<summary>
+    ///
+    ///<see cref="http://www.covid-rdf-tracker.com/graph#Encounter"/>
+    ///</summary>
+    public static readonly Class Encounter = new Class(new Uri("http://www.covid-rdf-tracker.com/graph#Encounter"));    
+
+    ///<summary>
+    ///
+    ///<see cref="http://www.covid-rdf-tracker.com/graph#ENLDN"/>
+    ///</summary>
+    public static readonly Resource ENLDN = new Resource(new Uri("http://www.covid-rdf-tracker.com/graph#ENLDN"));    
+
+    ///<summary>
+    ///
+    ///<see cref="http://www.covid-rdf-tracker.com/graph#ESBCN"/>
+    ///</summary>
+    public static readonly Resource ESBCN = new Resource(new Uri("http://www.covid-rdf-tracker.com/graph#ESBCN"));    
+
+    ///<summary>
+    ///
+    ///<see cref="http://www.covid-rdf-tracker.com/graph#FRPAR"/>
+    ///</summary>
+    public static readonly Resource FRPAR = new Resource(new Uri("http://www.covid-rdf-tracker.com/graph#FRPAR"));    
+
+    ///<summary>
+    ///
+    ///<see cref="http://www.covid-rdf-tracker.com/graph#FXVJXS"/>
+    ///</summary>
+    public static readonly Resource FXVJXS = new Resource(new Uri("http://www.covid-rdf-tracker.com/graph#FXVJXS"));    
+
+    ///<summary>
+    ///
+    ///<see cref="http://www.covid-rdf-tracker.com/graph#GAXCXS"/>
+    ///</summary>
+    public static readonly Resource GAXCXS = new Resource(new Uri("http://www.covid-rdf-tracker.com/graph#GAXCXS"));    
+
+    ///<summary>
+    ///
+    ///<see cref="http://www.covid-rdf-tracker.com/graph#GWAXBD"/>
+    ///</summary>
+    public static readonly Resource GWAXBD = new Resource(new Uri("http://www.covid-rdf-tracker.com/graph#GWAXBD"));    
+
+    ///<summary>
+    ///
+    ///<see cref="http://www.covid-rdf-tracker.com/graph#HHGTCF"/>
+    ///</summary>
+    public static readonly Resource HHGTCF = new Resource(new Uri("http://www.covid-rdf-tracker.com/graph#HHGTCF"));    
+
+    ///<summary>
+    ///
+    ///<see cref="http://www.covid-rdf-tracker.com/graph#HZFLJF"/>
+    ///</summary>
+    public static readonly Resource HZFLJF = new Resource(new Uri("http://www.covid-rdf-tracker.com/graph#HZFLJF"));    
+
+    ///<summary>
+    ///
+    ///<see cref="http://www.covid-rdf-tracker.com/graph#InfectiousDisease"/>
+    ///</summary>
+    public static readonly Class InfectiousDisease = new Class(new Uri("http://www.covid-rdf-tracker.com/graph#InfectiousDisease"));    
+
+    ///<summary>
+    ///
+    ///<see cref="http://www.covid-rdf-tracker.com/graph#JCBVVF"/>
+    ///</summary>
+    public static readonly Resource JCBVVF = new Resource(new Uri("http://www.covid-rdf-tracker.com/graph#JCBVVF"));    
+
+    ///<summary>
+    ///
+    ///<see cref="http://www.covid-rdf-tracker.com/graph#KHMFHS"/>
+    ///</summary>
+    public static readonly Resource KHMFHS = new Resource(new Uri("http://www.covid-rdf-tracker.com/graph#KHMFHS"));    
+
+    ///<summary>
+    ///
+    ///<see cref="http://www.covid-rdf-tracker.com/graph#KLEDMH"/>
+    ///</summary>
+    public static readonly Resource KLEDMH = new Resource(new Uri("http://www.covid-rdf-tracker.com/graph#KLEDMH"));    
+
+    ///<summary>
+    ///
+    ///<see cref="http://www.covid-rdf-tracker.com/graph#LUZULZ"/>
+    ///</summary>
+    public static readonly Resource LUZULZ = new Resource(new Uri("http://www.covid-rdf-tracker.com/graph#LUZULZ"));    
+
+    ///<summary>
+    ///
+    ///<see cref="http://www.covid-rdf-tracker.com/graph#MMGPDN"/>
+    ///</summary>
+    public static readonly Resource MMGPDN = new Resource(new Uri("http://www.covid-rdf-tracker.com/graph#MMGPDN"));    
+
+    ///<summary>
+    ///
+    ///<see cref="http://www.covid-rdf-tracker.com/graph#NABKZM"/>
+    ///</summary>
+    public static readonly Resource NABKZM = new Resource(new Uri("http://www.covid-rdf-tracker.com/graph#NABKZM"));    
+
+    ///<summary>
+    ///
+    ///<see cref="http://www.covid-rdf-tracker.com/graph#name"/>
+    ///</summary>
+    public static readonly Property name = new Property(new Uri("http://www.covid-rdf-tracker.com/graph#name"));    
+
+    ///<summary>
+    ///
+    ///<see cref="http://www.covid-rdf-tracker.com/graph#NDBXCL"/>
+    ///</summary>
+    public static readonly Resource NDBXCL = new Resource(new Uri("http://www.covid-rdf-tracker.com/graph#NDBXCL"));    
+
+    ///<summary>
+    ///
+    ///<see cref="http://www.covid-rdf-tracker.com/graph#NSTEBX"/>
+    ///</summary>
+    public static readonly Resource NSTEBX = new Resource(new Uri("http://www.covid-rdf-tracker.com/graph#NSTEBX"));    
+
+    ///<summary>
+    ///
+    ///<see cref="http://www.covid-rdf-tracker.com/graph#person"/>
+    ///</summary>
+    public static readonly Property person = new Property(new Uri("http://www.covid-rdf-tracker.com/graph#person"));    
+
+    ///<summary>
+    ///
+    ///<see cref="http://www.covid-rdf-tracker.com/graph#Person"/>
+    ///</summary>
+    public static readonly Class Person = new Class(new Uri("http://www.covid-rdf-tracker.com/graph#Person"));    
+
+    ///<summary>
+    ///
+    ///<see cref="http://www.covid-rdf-tracker.com/graph#PGADMP"/>
+    ///</summary>
+    public static readonly Resource PGADMP = new Resource(new Uri("http://www.covid-rdf-tracker.com/graph#PGADMP"));    
+
+    ///<summary>
+    ///
+    ///<see cref="http://www.covid-rdf-tracker.com/graph#place"/>
+    ///</summary>
+    public static readonly Property place = new Property(new Uri("http://www.covid-rdf-tracker.com/graph#place"));    
+
+    ///<summary>
+    ///
+    ///<see cref="http://www.covid-rdf-tracker.com/graph#Place"/>
+    ///</summary>
+    public static readonly Class Place = new Class(new Uri("http://www.covid-rdf-tracker.com/graph#Place"));    
+
+    ///<summary>
+    ///
+    ///<see cref="http://www.covid-rdf-tracker.com/graph#PVTCUS"/>
+    ///</summary>
+    public static readonly Resource PVTCUS = new Resource(new Uri("http://www.covid-rdf-tracker.com/graph#PVTCUS"));    
+
+    ///<summary>
+    ///
+    ///<see cref="http://www.covid-rdf-tracker.com/graph#QCASYA"/>
+    ///</summary>
+    public static readonly Resource QCASYA = new Resource(new Uri("http://www.covid-rdf-tracker.com/graph#QCASYA"));    
+
+    ///<summary>
+    ///
+    ///<see cref="http://www.covid-rdf-tracker.com/graph#QCCLHW"/>
+    ///</summary>
+    public static readonly Resource QCCLHW = new Resource(new Uri("http://www.covid-rdf-tracker.com/graph#QCCLHW"));    
+
+    ///<summary>
+    ///
+    ///<see cref="http://www.covid-rdf-tracker.com/graph#QMTWAE"/>
+    ///</summary>
+    public static readonly Resource QMTWAE = new Resource(new Uri("http://www.covid-rdf-tracker.com/graph#QMTWAE"));    
+
+    ///<summary>
+    ///
+    ///<see cref="http://www.covid-rdf-tracker.com/graph#RATJEP"/>
+    ///</summary>
+    public static readonly Resource RATJEP = new Resource(new Uri("http://www.covid-rdf-tracker.com/graph#RATJEP"));    
+
+    ///<summary>
+    ///
+    ///<see cref="http://www.covid-rdf-tracker.com/graph#RNTQED"/>
+    ///</summary>
+    public static readonly Resource RNTQED = new Resource(new Uri("http://www.covid-rdf-tracker.com/graph#RNTQED"));    
+
+    ///<summary>
+    ///
+    ///<see cref="http://www.covid-rdf-tracker.com/graph#SQQTAZ"/>
+    ///</summary>
+    public static readonly Resource SQQTAZ = new Resource(new Uri("http://www.covid-rdf-tracker.com/graph#SQQTAZ"));    
+
+    ///<summary>
+    ///
+    ///<see cref="http://www.covid-rdf-tracker.com/graph#STRVYT"/>
+    ///</summary>
+    public static readonly Resource STRVYT = new Resource(new Uri("http://www.covid-rdf-tracker.com/graph#STRVYT"));    
+
+    ///<summary>
+    ///
+    ///<see cref="http://www.covid-rdf-tracker.com/graph#SXJMXE"/>
+    ///</summary>
+    public static readonly Resource SXJMXE = new Resource(new Uri("http://www.covid-rdf-tracker.com/graph#SXJMXE"));    
+
+    ///<summary>
+    ///
+    ///<see cref="http://www.covid-rdf-tracker.com/graph#TXMXJP"/>
+    ///</summary>
+    public static readonly Resource TXMXJP = new Resource(new Uri("http://www.covid-rdf-tracker.com/graph#TXMXJP"));    
+
+    ///<summary>
+    ///
+    ///<see cref="http://www.covid-rdf-tracker.com/graph#ULKQUF"/>
+    ///</summary>
+    public static readonly Resource ULKQUF = new Resource(new Uri("http://www.covid-rdf-tracker.com/graph#ULKQUF"));    
+
+    ///<summary>
+    ///
+    ///<see cref="http://www.covid-rdf-tracker.com/graph#UYPCAT"/>
+    ///</summary>
+    public static readonly Resource UYPCAT = new Resource(new Uri("http://www.covid-rdf-tracker.com/graph#UYPCAT"));    
+
+    ///<summary>
+    ///
+    ///<see cref="http://www.covid-rdf-tracker.com/graph#VJUAKW"/>
+    ///</summary>
+    public static readonly Resource VJUAKW = new Resource(new Uri("http://www.covid-rdf-tracker.com/graph#VJUAKW"));    
+
+    ///<summary>
+    ///
+    ///<see cref="http://www.covid-rdf-tracker.com/graph#VTGSHK"/>
+    ///</summary>
+    public static readonly Resource VTGSHK = new Resource(new Uri("http://www.covid-rdf-tracker.com/graph#VTGSHK"));    
+
+    ///<summary>
+    ///
+    ///<see cref="http://www.covid-rdf-tracker.com/graph#WFZDWR"/>
+    ///</summary>
+    public static readonly Resource WFZDWR = new Resource(new Uri("http://www.covid-rdf-tracker.com/graph#WFZDWR"));    
+
+    ///<summary>
+    ///
+    ///<see cref="http://www.covid-rdf-tracker.com/graph#WHCWPA"/>
+    ///</summary>
+    public static readonly Resource WHCWPA = new Resource(new Uri("http://www.covid-rdf-tracker.com/graph#WHCWPA"));    
+
+    ///<summary>
+    ///
+    ///<see cref="http://www.covid-rdf-tracker.com/graph#WUJVBR"/>
+    ///</summary>
+    public static readonly Resource WUJVBR = new Resource(new Uri("http://www.covid-rdf-tracker.com/graph#WUJVBR"));    
+
+    ///<summary>
+    ///
+    ///<see cref="http://www.covid-rdf-tracker.com/graph#XNMZNP"/>
+    ///</summary>
+    public static readonly Resource XNMZNP = new Resource(new Uri("http://www.covid-rdf-tracker.com/graph#XNMZNP"));    
+
+    ///<summary>
+    ///
+    ///<see cref="http://www.covid-rdf-tracker.com/graph#XPHVZD"/>
+    ///</summary>
+    public static readonly Resource XPHVZD = new Resource(new Uri("http://www.covid-rdf-tracker.com/graph#XPHVZD"));    
+
+    ///<summary>
+    ///
+    ///<see cref="http://www.covid-rdf-tracker.com/graph#XWDBGX"/>
+    ///</summary>
+    public static readonly Resource XWDBGX = new Resource(new Uri("http://www.covid-rdf-tracker.com/graph#XWDBGX"));    
+
+    ///<summary>
+    ///
+    ///<see cref="http://www.covid-rdf-tracker.com/graph#YJZTNH"/>
+    ///</summary>
+    public static readonly Resource YJZTNH = new Resource(new Uri("http://www.covid-rdf-tracker.com/graph#YJZTNH"));    
+
+    ///<summary>
+    ///
+    ///<see cref="http://www.covid-rdf-tracker.com/graph#ZNSUGM"/>
+    ///</summary>
+    public static readonly Resource ZNSUGM = new Resource(new Uri("http://www.covid-rdf-tracker.com/graph#ZNSUGM"));    
+
+    ///<summary>
+    ///
+    ///<see cref="http://www.covid-rdf-tracker.com/graph#ZXRTUW"/>
+    ///</summary>
+    public static readonly Resource ZXRTUW = new Resource(new Uri("http://www.covid-rdf-tracker.com/graph#ZXRTUW"));    
+
+    ///<summary>
+    ///
+    ///<see cref="http://www.covid-rdf-tracker.com/graph#ZYAGCY"/>
+    ///</summary>
+    public static readonly Resource ZYAGCY = new Resource(new Uri("http://www.covid-rdf-tracker.com/graph#ZYAGCY"));
 }
 ///<summary>
 ///
 ///
 ///</summary>
-public static class CWA
+public static class CRT
 {
-    public static readonly Uri Namespace = new Uri("http://www.sap-cwa-graph.com/rdf#");
+    public static readonly Uri Namespace = new Uri("http://www.covid-rdf-tracker.com/graph#");
     public static Uri GetNamespace() { return Namespace; }
     
-    public static readonly string Prefix = "CWA";
+    public static readonly string Prefix = "CRT";
     public static string GetPrefix() { return Prefix; } 
 
     ///<summary>
     ///
-    ///<see cref="http://www.sap-cwa-graph.com/rdf"/>
+    ///<see cref="http://www.covid-rdf-tracker.com/graph"/>
     ///</summary>
-    public const string rdf = "http://www.sap-cwa-graph.com/rdf";
+    public const string graph = "http://www.covid-rdf-tracker.com/graph";
 
     ///<summary>
     ///
-    ///<see cref="http://www.sap-cwa-graph.com/rdf#code"/>
+    ///<see cref="http://www.covid-rdf-tracker.com/graph#BFLBQX"/>
     ///</summary>
-    public const string code = "http://www.sap-cwa-graph.com/rdf#code";
+    public const string BFLBQX = "http://www.covid-rdf-tracker.com/graph#BFLBQX";
 
     ///<summary>
     ///
-    ///<see cref="http://www.sap-cwa-graph.com/rdf#hasEncountered"/>
+    ///<see cref="http://www.covid-rdf-tracker.com/graph#BPZJGG"/>
     ///</summary>
-    public const string hasEncountered = "http://www.sap-cwa-graph.com/rdf#hasEncountered";
+    public const string BPZJGG = "http://www.covid-rdf-tracker.com/graph#BPZJGG";
 
     ///<summary>
     ///
-    ///<see cref="http://www.sap-cwa-graph.com/rdf#isInfected"/>
+    ///<see cref="http://www.covid-rdf-tracker.com/graph#BQKPSX"/>
     ///</summary>
-    public const string isInfected = "http://www.sap-cwa-graph.com/rdf#isInfected";
+    public const string BQKPSX = "http://www.covid-rdf-tracker.com/graph#BQKPSX";
 
     ///<summary>
     ///
-    ///<see cref="http://www.sap-cwa-graph.com/rdf#User"/>
+    ///<see cref="http://www.covid-rdf-tracker.com/graph#CDPVQF"/>
     ///</summary>
-    public const string User = "http://www.sap-cwa-graph.com/rdf#User";
+    public const string CDPVQF = "http://www.covid-rdf-tracker.com/graph#CDPVQF";
+
+    ///<summary>
+    ///
+    ///<see cref="http://www.covid-rdf-tracker.com/graph#CKQSYV"/>
+    ///</summary>
+    public const string CKQSYV = "http://www.covid-rdf-tracker.com/graph#CKQSYV";
+
+    ///<summary>
+    ///
+    ///<see cref="http://www.covid-rdf-tracker.com/graph#CKXBAN"/>
+    ///</summary>
+    public const string CKXBAN = "http://www.covid-rdf-tracker.com/graph#CKXBAN";
+
+    ///<summary>
+    ///
+    ///<see cref="http://www.covid-rdf-tracker.com/graph#classification"/>
+    ///</summary>
+    public const string classification = "http://www.covid-rdf-tracker.com/graph#classification";
+
+    ///<summary>
+    ///
+    ///<see cref="http://www.covid-rdf-tracker.com/graph#CLCDJG"/>
+    ///</summary>
+    public const string CLCDJG = "http://www.covid-rdf-tracker.com/graph#CLCDJG";
+
+    ///<summary>
+    ///
+    ///<see cref="http://www.covid-rdf-tracker.com/graph#dateDiagnosed"/>
+    ///</summary>
+    public const string dateDiagnosed = "http://www.covid-rdf-tracker.com/graph#dateDiagnosed";
+
+    ///<summary>
+    ///
+    ///<see cref="http://www.covid-rdf-tracker.com/graph#dateEncountered"/>
+    ///</summary>
+    public const string dateEncountered = "http://www.covid-rdf-tracker.com/graph#dateEncountered";
+
+    ///<summary>
+    ///
+    ///<see cref="http://www.covid-rdf-tracker.com/graph#DEBER"/>
+    ///</summary>
+    public const string DEBER = "http://www.covid-rdf-tracker.com/graph#DEBER";
+
+    ///<summary>
+    ///
+    ///<see cref="http://www.covid-rdf-tracker.com/graph#DECGN"/>
+    ///</summary>
+    public const string DECGN = "http://www.covid-rdf-tracker.com/graph#DECGN";
+
+    ///<summary>
+    ///
+    ///<see cref="http://www.covid-rdf-tracker.com/graph#DEMUC"/>
+    ///</summary>
+    public const string DEMUC = "http://www.covid-rdf-tracker.com/graph#DEMUC";
+
+    ///<summary>
+    ///
+    ///<see cref="http://www.covid-rdf-tracker.com/graph#diagnosis"/>
+    ///</summary>
+    public const string diagnosis = "http://www.covid-rdf-tracker.com/graph#diagnosis";
+
+    ///<summary>
+    ///
+    ///<see cref="http://www.covid-rdf-tracker.com/graph#DSPHLW"/>
+    ///</summary>
+    public const string DSPHLW = "http://www.covid-rdf-tracker.com/graph#DSPHLW";
+
+    ///<summary>
+    ///
+    ///<see cref="http://www.covid-rdf-tracker.com/graph#DTRKNE"/>
+    ///</summary>
+    public const string DTRKNE = "http://www.covid-rdf-tracker.com/graph#DTRKNE";
+
+    ///<summary>
+    ///
+    ///<see cref="http://www.covid-rdf-tracker.com/graph#DUWDWN"/>
+    ///</summary>
+    public const string DUWDWN = "http://www.covid-rdf-tracker.com/graph#DUWDWN";
+
+    ///<summary>
+    ///
+    ///<see cref="http://www.covid-rdf-tracker.com/graph#EAFMKE"/>
+    ///</summary>
+    public const string EAFMKE = "http://www.covid-rdf-tracker.com/graph#EAFMKE";
+
+    ///<summary>
+    ///
+    ///<see cref="http://www.covid-rdf-tracker.com/graph#EKGFKJ"/>
+    ///</summary>
+    public const string EKGFKJ = "http://www.covid-rdf-tracker.com/graph#EKGFKJ";
+
+    ///<summary>
+    ///
+    ///<see cref="http://www.covid-rdf-tracker.com/graph#encounter"/>
+    ///</summary>
+    public const string encounter = "http://www.covid-rdf-tracker.com/graph#encounter";
+
+    ///<summary>
+    ///
+    ///<see cref="http://www.covid-rdf-tracker.com/graph#Encounter"/>
+    ///</summary>
+    public const string Encounter = "http://www.covid-rdf-tracker.com/graph#Encounter";
+
+    ///<summary>
+    ///
+    ///<see cref="http://www.covid-rdf-tracker.com/graph#ENLDN"/>
+    ///</summary>
+    public const string ENLDN = "http://www.covid-rdf-tracker.com/graph#ENLDN";
+
+    ///<summary>
+    ///
+    ///<see cref="http://www.covid-rdf-tracker.com/graph#ESBCN"/>
+    ///</summary>
+    public const string ESBCN = "http://www.covid-rdf-tracker.com/graph#ESBCN";
+
+    ///<summary>
+    ///
+    ///<see cref="http://www.covid-rdf-tracker.com/graph#FRPAR"/>
+    ///</summary>
+    public const string FRPAR = "http://www.covid-rdf-tracker.com/graph#FRPAR";
+
+    ///<summary>
+    ///
+    ///<see cref="http://www.covid-rdf-tracker.com/graph#FXVJXS"/>
+    ///</summary>
+    public const string FXVJXS = "http://www.covid-rdf-tracker.com/graph#FXVJXS";
+
+    ///<summary>
+    ///
+    ///<see cref="http://www.covid-rdf-tracker.com/graph#GAXCXS"/>
+    ///</summary>
+    public const string GAXCXS = "http://www.covid-rdf-tracker.com/graph#GAXCXS";
+
+    ///<summary>
+    ///
+    ///<see cref="http://www.covid-rdf-tracker.com/graph#GWAXBD"/>
+    ///</summary>
+    public const string GWAXBD = "http://www.covid-rdf-tracker.com/graph#GWAXBD";
+
+    ///<summary>
+    ///
+    ///<see cref="http://www.covid-rdf-tracker.com/graph#HHGTCF"/>
+    ///</summary>
+    public const string HHGTCF = "http://www.covid-rdf-tracker.com/graph#HHGTCF";
+
+    ///<summary>
+    ///
+    ///<see cref="http://www.covid-rdf-tracker.com/graph#HZFLJF"/>
+    ///</summary>
+    public const string HZFLJF = "http://www.covid-rdf-tracker.com/graph#HZFLJF";
+
+    ///<summary>
+    ///
+    ///<see cref="http://www.covid-rdf-tracker.com/graph#InfectiousDisease"/>
+    ///</summary>
+    public const string InfectiousDisease = "http://www.covid-rdf-tracker.com/graph#InfectiousDisease";
+
+    ///<summary>
+    ///
+    ///<see cref="http://www.covid-rdf-tracker.com/graph#JCBVVF"/>
+    ///</summary>
+    public const string JCBVVF = "http://www.covid-rdf-tracker.com/graph#JCBVVF";
+
+    ///<summary>
+    ///
+    ///<see cref="http://www.covid-rdf-tracker.com/graph#KHMFHS"/>
+    ///</summary>
+    public const string KHMFHS = "http://www.covid-rdf-tracker.com/graph#KHMFHS";
+
+    ///<summary>
+    ///
+    ///<see cref="http://www.covid-rdf-tracker.com/graph#KLEDMH"/>
+    ///</summary>
+    public const string KLEDMH = "http://www.covid-rdf-tracker.com/graph#KLEDMH";
+
+    ///<summary>
+    ///
+    ///<see cref="http://www.covid-rdf-tracker.com/graph#LUZULZ"/>
+    ///</summary>
+    public const string LUZULZ = "http://www.covid-rdf-tracker.com/graph#LUZULZ";
+
+    ///<summary>
+    ///
+    ///<see cref="http://www.covid-rdf-tracker.com/graph#MMGPDN"/>
+    ///</summary>
+    public const string MMGPDN = "http://www.covid-rdf-tracker.com/graph#MMGPDN";
+
+    ///<summary>
+    ///
+    ///<see cref="http://www.covid-rdf-tracker.com/graph#NABKZM"/>
+    ///</summary>
+    public const string NABKZM = "http://www.covid-rdf-tracker.com/graph#NABKZM";
+
+    ///<summary>
+    ///
+    ///<see cref="http://www.covid-rdf-tracker.com/graph#name"/>
+    ///</summary>
+    public const string name = "http://www.covid-rdf-tracker.com/graph#name";
+
+    ///<summary>
+    ///
+    ///<see cref="http://www.covid-rdf-tracker.com/graph#NDBXCL"/>
+    ///</summary>
+    public const string NDBXCL = "http://www.covid-rdf-tracker.com/graph#NDBXCL";
+
+    ///<summary>
+    ///
+    ///<see cref="http://www.covid-rdf-tracker.com/graph#NSTEBX"/>
+    ///</summary>
+    public const string NSTEBX = "http://www.covid-rdf-tracker.com/graph#NSTEBX";
+
+    ///<summary>
+    ///
+    ///<see cref="http://www.covid-rdf-tracker.com/graph#person"/>
+    ///</summary>
+    public const string person = "http://www.covid-rdf-tracker.com/graph#person";
+
+    ///<summary>
+    ///
+    ///<see cref="http://www.covid-rdf-tracker.com/graph#Person"/>
+    ///</summary>
+    public const string Person = "http://www.covid-rdf-tracker.com/graph#Person";
+
+    ///<summary>
+    ///
+    ///<see cref="http://www.covid-rdf-tracker.com/graph#PGADMP"/>
+    ///</summary>
+    public const string PGADMP = "http://www.covid-rdf-tracker.com/graph#PGADMP";
+
+    ///<summary>
+    ///
+    ///<see cref="http://www.covid-rdf-tracker.com/graph#place"/>
+    ///</summary>
+    public const string place = "http://www.covid-rdf-tracker.com/graph#place";
+
+    ///<summary>
+    ///
+    ///<see cref="http://www.covid-rdf-tracker.com/graph#Place"/>
+    ///</summary>
+    public const string Place = "http://www.covid-rdf-tracker.com/graph#Place";
+
+    ///<summary>
+    ///
+    ///<see cref="http://www.covid-rdf-tracker.com/graph#PVTCUS"/>
+    ///</summary>
+    public const string PVTCUS = "http://www.covid-rdf-tracker.com/graph#PVTCUS";
+
+    ///<summary>
+    ///
+    ///<see cref="http://www.covid-rdf-tracker.com/graph#QCASYA"/>
+    ///</summary>
+    public const string QCASYA = "http://www.covid-rdf-tracker.com/graph#QCASYA";
+
+    ///<summary>
+    ///
+    ///<see cref="http://www.covid-rdf-tracker.com/graph#QCCLHW"/>
+    ///</summary>
+    public const string QCCLHW = "http://www.covid-rdf-tracker.com/graph#QCCLHW";
+
+    ///<summary>
+    ///
+    ///<see cref="http://www.covid-rdf-tracker.com/graph#QMTWAE"/>
+    ///</summary>
+    public const string QMTWAE = "http://www.covid-rdf-tracker.com/graph#QMTWAE";
+
+    ///<summary>
+    ///
+    ///<see cref="http://www.covid-rdf-tracker.com/graph#RATJEP"/>
+    ///</summary>
+    public const string RATJEP = "http://www.covid-rdf-tracker.com/graph#RATJEP";
+
+    ///<summary>
+    ///
+    ///<see cref="http://www.covid-rdf-tracker.com/graph#RNTQED"/>
+    ///</summary>
+    public const string RNTQED = "http://www.covid-rdf-tracker.com/graph#RNTQED";
+
+    ///<summary>
+    ///
+    ///<see cref="http://www.covid-rdf-tracker.com/graph#SQQTAZ"/>
+    ///</summary>
+    public const string SQQTAZ = "http://www.covid-rdf-tracker.com/graph#SQQTAZ";
+
+    ///<summary>
+    ///
+    ///<see cref="http://www.covid-rdf-tracker.com/graph#STRVYT"/>
+    ///</summary>
+    public const string STRVYT = "http://www.covid-rdf-tracker.com/graph#STRVYT";
+
+    ///<summary>
+    ///
+    ///<see cref="http://www.covid-rdf-tracker.com/graph#SXJMXE"/>
+    ///</summary>
+    public const string SXJMXE = "http://www.covid-rdf-tracker.com/graph#SXJMXE";
+
+    ///<summary>
+    ///
+    ///<see cref="http://www.covid-rdf-tracker.com/graph#TXMXJP"/>
+    ///</summary>
+    public const string TXMXJP = "http://www.covid-rdf-tracker.com/graph#TXMXJP";
+
+    ///<summary>
+    ///
+    ///<see cref="http://www.covid-rdf-tracker.com/graph#ULKQUF"/>
+    ///</summary>
+    public const string ULKQUF = "http://www.covid-rdf-tracker.com/graph#ULKQUF";
+
+    ///<summary>
+    ///
+    ///<see cref="http://www.covid-rdf-tracker.com/graph#UYPCAT"/>
+    ///</summary>
+    public const string UYPCAT = "http://www.covid-rdf-tracker.com/graph#UYPCAT";
+
+    ///<summary>
+    ///
+    ///<see cref="http://www.covid-rdf-tracker.com/graph#VJUAKW"/>
+    ///</summary>
+    public const string VJUAKW = "http://www.covid-rdf-tracker.com/graph#VJUAKW";
+
+    ///<summary>
+    ///
+    ///<see cref="http://www.covid-rdf-tracker.com/graph#VTGSHK"/>
+    ///</summary>
+    public const string VTGSHK = "http://www.covid-rdf-tracker.com/graph#VTGSHK";
+
+    ///<summary>
+    ///
+    ///<see cref="http://www.covid-rdf-tracker.com/graph#WFZDWR"/>
+    ///</summary>
+    public const string WFZDWR = "http://www.covid-rdf-tracker.com/graph#WFZDWR";
+
+    ///<summary>
+    ///
+    ///<see cref="http://www.covid-rdf-tracker.com/graph#WHCWPA"/>
+    ///</summary>
+    public const string WHCWPA = "http://www.covid-rdf-tracker.com/graph#WHCWPA";
+
+    ///<summary>
+    ///
+    ///<see cref="http://www.covid-rdf-tracker.com/graph#WUJVBR"/>
+    ///</summary>
+    public const string WUJVBR = "http://www.covid-rdf-tracker.com/graph#WUJVBR";
+
+    ///<summary>
+    ///
+    ///<see cref="http://www.covid-rdf-tracker.com/graph#XNMZNP"/>
+    ///</summary>
+    public const string XNMZNP = "http://www.covid-rdf-tracker.com/graph#XNMZNP";
+
+    ///<summary>
+    ///
+    ///<see cref="http://www.covid-rdf-tracker.com/graph#XPHVZD"/>
+    ///</summary>
+    public const string XPHVZD = "http://www.covid-rdf-tracker.com/graph#XPHVZD";
+
+    ///<summary>
+    ///
+    ///<see cref="http://www.covid-rdf-tracker.com/graph#XWDBGX"/>
+    ///</summary>
+    public const string XWDBGX = "http://www.covid-rdf-tracker.com/graph#XWDBGX";
+
+    ///<summary>
+    ///
+    ///<see cref="http://www.covid-rdf-tracker.com/graph#YJZTNH"/>
+    ///</summary>
+    public const string YJZTNH = "http://www.covid-rdf-tracker.com/graph#YJZTNH";
+
+    ///<summary>
+    ///
+    ///<see cref="http://www.covid-rdf-tracker.com/graph#ZNSUGM"/>
+    ///</summary>
+    public const string ZNSUGM = "http://www.covid-rdf-tracker.com/graph#ZNSUGM";
+
+    ///<summary>
+    ///
+    ///<see cref="http://www.covid-rdf-tracker.com/graph#ZXRTUW"/>
+    ///</summary>
+    public const string ZXRTUW = "http://www.covid-rdf-tracker.com/graph#ZXRTUW";
+
+    ///<summary>
+    ///
+    ///<see cref="http://www.covid-rdf-tracker.com/graph#ZYAGCY"/>
+    ///</summary>
+    public const string ZYAGCY = "http://www.covid-rdf-tracker.com/graph#ZYAGCY";
 }
 }

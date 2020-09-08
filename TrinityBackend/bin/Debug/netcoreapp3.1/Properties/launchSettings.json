@@ -17,7 +17,7 @@
         "ASPNETCORE_ENVIRONMENT": "Development"
       }
     },
-    "CWA_Graph": {
+    "ContactTracingGraph": {
       "commandName": "Project",
       "launchBrowser": true,
       "launchUrl": "weatherforecast",

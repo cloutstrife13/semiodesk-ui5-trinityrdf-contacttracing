@@ -2,7 +2,7 @@
 using System;
 using System.ComponentModel.DataAnnotations;
 
-namespace CWA_Graph.Configurations
+namespace ContactTracingGraph.Configurations
 {
     public class ODataResource : Resource
     {
@@ -23,7 +23,7 @@ namespace CWA_Graph.Configurations
         {
             return string.IsNullOrEmpty(id)
                       ? new Uri($"{type}_{DateTime.Now.ToString("HHmmssddMMyyyy")}")
-                      : new Uri($"{CWA.Namespace}{id}");
+                      : new Uri($"{CRT.Namespace}{id}");
         }
     }
 }

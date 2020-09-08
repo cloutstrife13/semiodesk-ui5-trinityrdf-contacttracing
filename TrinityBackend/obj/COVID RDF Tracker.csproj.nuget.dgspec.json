@@ -1,15 +1,15 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\andyl\\Documents\\GitHub\\semiodesk-ui5-trinityrdf-contacttracing\\TrinityBackend\\CWA Graph.csproj": {}
+    "C:\\Users\\andyl\\Documents\\GitHub\\semiodesk-ui5-trinityrdf-contacttracing\\TrinityBackend\\COVID RDF Tracker.csproj": {}
   },
   "projects": {
-    "C:\\Users\\andyl\\Documents\\GitHub\\semiodesk-ui5-trinityrdf-contacttracing\\TrinityBackend\\CWA Graph.csproj": {
+    "C:\\Users\\andyl\\Documents\\GitHub\\semiodesk-ui5-trinityrdf-contacttracing\\TrinityBackend\\COVID RDF Tracker.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\andyl\\Documents\\GitHub\\semiodesk-ui5-trinityrdf-contacttracing\\TrinityBackend\\CWA Graph.csproj",
-        "projectName": "CWA Graph",
-        "projectPath": "C:\\Users\\andyl\\Documents\\GitHub\\semiodesk-ui5-trinityrdf-contacttracing\\TrinityBackend\\CWA Graph.csproj",
+        "projectUniqueName": "C:\\Users\\andyl\\Documents\\GitHub\\semiodesk-ui5-trinityrdf-contacttracing\\TrinityBackend\\COVID RDF Tracker.csproj",
+        "projectName": "COVID RDF Tracker",
+        "projectPath": "C:\\Users\\andyl\\Documents\\GitHub\\semiodesk-ui5-trinityrdf-contacttracing\\TrinityBackend\\COVID RDF Tracker.csproj",
         "packagesPath": "C:\\Users\\andyl\\.nuget\\packages\\",
         "outputPath": "C:\\Users\\andyl\\Documents\\GitHub\\semiodesk-ui5-trinityrdf-contacttracing\\TrinityBackend\\obj\\",
         "projectStyle": "PackageReference",

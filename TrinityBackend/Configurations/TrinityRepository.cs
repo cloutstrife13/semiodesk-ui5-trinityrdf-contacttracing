@@ -3,7 +3,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 
-namespace CWA_Graph.Configurations
+namespace ContactTracingGraph.Configurations
 {
     public class TrinityRepository<T> where T : ODataResource
     {

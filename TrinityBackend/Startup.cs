@@ -1,4 +1,4 @@
-using CWA_Graph.Configurations;
+using ContactTracingGraph.Configurations;
 using Microsoft.AspNet.OData.Batch;
 using Microsoft.AspNet.OData.Extensions;
 using Microsoft.AspNetCore.Builder;
@@ -7,7 +7,7 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 
-namespace CWA_Graph
+namespace ContactTracingGraph
 {
     public class Startup
     {

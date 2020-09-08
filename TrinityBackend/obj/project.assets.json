@@ -5975,11 +5975,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\andyl\\source\\repos\\CWAGraph\\CWA Graph\\CWA Graph.csproj",
-      "projectName": "CWA Graph",
-      "projectPath": "C:\\Users\\andyl\\source\\repos\\CWAGraph\\CWA Graph\\CWA Graph.csproj",
+      "projectUniqueName": "C:\\Users\\andyl\\Documents\\GitHub\\semiodesk-ui5-trinityrdf-contacttracing\\TrinityBackend\\Contact Tracing Graph.csproj",
+      "projectName": "Contact Tracing Graph",
+      "projectPath": "C:\\Users\\andyl\\Documents\\GitHub\\semiodesk-ui5-trinityrdf-contacttracing\\TrinityBackend\\Contact Tracing Graph.csproj",
       "packagesPath": "C:\\Users\\andyl\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\andyl\\source\\repos\\CWAGraph\\CWA Graph\\obj\\",
+      "outputPath": "C:\\Users\\andyl\\Documents\\GitHub\\semiodesk-ui5-trinityrdf-contacttracing\\TrinityBackend\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Microsoft\\Xamarin\\NuGet\\",

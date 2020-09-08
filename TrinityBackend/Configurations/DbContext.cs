@@ -4,12 +4,12 @@ using System;
 using System.IO;
 using System.Reflection;
 
-namespace CWA_Graph.Configurations
+namespace ContactTracingGraph.Configurations
 {
     public class DbContext
     {
         private string connectionString = "provider=virtuoso;host=localhost;port=1111;uid=dba;pw=dba;rule=urn:example/ruleset";
-        private Uri defaultModelUri = CWA.Namespace;
+        private Uri defaultModelUri = CRT.Namespace;
         public IStore Store { get { return StoreFactory.CreateStore(connectionString); } }
 
         public IModel DefaultModel
@@ -25,7 +25,8 @@ namespace CWA_Graph.Configurations
         {
             StoreFactory.LoadProvider<VirtuosoStoreProvider>();
 
-            if (Store.GetModel(defaultModelUri).IsEmpty)
+            // UNCOMMENT THE FOLLOWING LINE FOR PREVENTING THE ONTOLOGY TO BE OVERWRITTEN BY ITS DEFAULT VERSION
+            //if (Store.GetModel(defaultModelUri).IsEmpty)
                 Store.InitializeFromConfiguration(Path.Combine(Environment.CurrentDirectory, "ontologies.config"));
 
             OntologyDiscovery.AddAssembly(Assembly.GetExecutingAssembly());
