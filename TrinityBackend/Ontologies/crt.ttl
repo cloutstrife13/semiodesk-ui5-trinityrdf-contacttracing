@@ -3,7 +3,7 @@
 <http://www.covid-rdf-tracker.com/graph> <http://purl.org/vocab/vann/preferredNamespacePrefix> "crt";
     <http://purl.org/vocab/vann/preferredNamespaceUri> <http://www.covid-rdf-tracker.com/graph#>;
     <http://purl.org/vocommons/voaf#classNumber> "4"^^<http://www.w3.org/2001/XMLSchema#integer>;
-    <http://purl.org/vocommons/voaf#instanceNumber> "56"^^<http://www.w3.org/2001/XMLSchema#integer>;
+    <http://purl.org/vocommons/voaf#instanceNumber> "62"^^<http://www.w3.org/2001/XMLSchema#integer>;
     <http://purl.org/vocommons/voaf#propertyNumber> "8"^^<http://www.w3.org/2001/XMLSchema#integer>;
     <http://schema.org/dateModified> "2020-09-07T16:05:09.000Z"^^<http://www.w3.org/2001/XMLSchema#dateTime>;
     <http://schema.org/description> "A demo ontology for presenting the power of the Semantic Graph Databases to SAP which concerns the COVID Contact Tracing use case."@en;
@@ -11,33 +11,39 @@
     <http://schema.org/name> "COVID RDF Tracker"@en;
     a <http://www.w3.org/2002/07/owl#Ontology>;
     <http://www.w3.org/2000/01/rdf-schema#label> "graph".
-crt:BFLBQX <http://schema.org/description> ""@en;
+crt:BFLBQX <http://schema.org/description> "Fictional code generated on https://www.randomcodegenerator.com/en/generate-codes@length6#result."@en;
     <http://schema.org/name> "BFLBQX"@en;
+    crt:encounter crt:ENC_FRPAR;
     a crt:Person;
     <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://www.covid-rdf-tracker.com/graph>;
     <http://www.w3.org/2000/01/rdf-schema#label> "BFLBQX".
-crt:BPZJGG <http://schema.org/description> ""@en;
+crt:BPZJGG <http://schema.org/description> "Fictional code generated on https://www.randomcodegenerator.com/en/generate-codes@length6#result."@en;
     <http://schema.org/name> "BPZJGG"@en;
+    crt:encounter crt:ENC_BAMUC;
     a crt:Person;
     <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://www.covid-rdf-tracker.com/graph>;
     <http://www.w3.org/2000/01/rdf-schema#label> "BPZJGG".
-crt:BQKPSX <http://schema.org/description> ""@en;
+crt:BQKPSX <http://schema.org/description> "Fictional code generated on https://www.randomcodegenerator.com/en/generate-codes@length6#result."@en;
     <http://schema.org/name> "BQKPSX"@en;
+    crt:encounter crt:ENC_FRPAR;
     a crt:Person;
     <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://www.covid-rdf-tracker.com/graph>;
     <http://www.w3.org/2000/01/rdf-schema#label> "BQKPSX".
-crt:CDPVQF <http://schema.org/description> ""@en;
+crt:CDPVQF <http://schema.org/description> "Fictional code generated on https://www.randomcodegenerator.com/en/generate-codes@length6#result."@en;
     <http://schema.org/name> "CDPVQF"@en;
+    crt:encounter crt:ENC_IRBAC;
     a crt:Person;
     <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://www.covid-rdf-tracker.com/graph>;
     <http://www.w3.org/2000/01/rdf-schema#label> "CDPVQF".
-crt:CKQSYV <http://schema.org/description> ""@en;
+crt:CKQSYV <http://schema.org/description> "Fictional code generated on https://www.randomcodegenerator.com/en/generate-codes@length6#result."@en;
     <http://schema.org/name> "CKQSYV"@en;
+    crt:encounter crt:ENC_FRPAR;
     a crt:Person;
     <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://www.covid-rdf-tracker.com/graph>;
     <http://www.w3.org/2000/01/rdf-schema#label> "CKQSYV".
-crt:CKXBAN <http://schema.org/description> ""@en;
+crt:CKXBAN <http://schema.org/description> "Fictional code generated on https://www.randomcodegenerator.com/en/generate-codes@length6#result."@en;
     <http://schema.org/name> "CKXBAN"@en;
+    crt:encounter crt:ENC_FRPAR;
     a crt:Person;
     <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://www.covid-rdf-tracker.com/graph>;
     <http://www.w3.org/2000/01/rdf-schema#label> "CKXBAN".
@@ -53,8 +59,9 @@ crt:classification <http://schema.org/dateCreated> "2020-09-08T13:25:29.000Z"^^<
     <http://www.w3.org/ns/prov#> "http://dbpedia.org/ontology/classification";
     <http://www.w3.org/ns/shacl#maxCount> "1"^^<http://www.w3.org/2001/XMLSchema#integer>;
     <http://www.w3.org/ns/shacl#minCount> "1"^^<http://www.w3.org/2001/XMLSchema#integer>.
-crt:CLCDJG <http://schema.org/description> ""@en;
+crt:CLCDJG <http://schema.org/description> "Fictional code generated on https://www.randomcodegenerator.com/en/generate-codes@length6#result."@en;
     <http://schema.org/name> "CLCDJG"@en;
+    crt:encounter crt:ENC_BAMUC;
     a crt:Person;
     <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://www.covid-rdf-tracker.com/graph>;
     <http://www.w3.org/2000/01/rdf-schema#label> "CLCDJG".
@@ -86,18 +93,18 @@ crt:DEBER <http://schema.org/description> "Berlin"@en;
     a crt:Place;
     <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://www.covid-rdf-tracker.com/graph>;
     <http://www.w3.org/2000/01/rdf-schema#label> "DEBER".
-crt:DECGN <http://schema.org/description> "Köln"@en;
+crt:DECGN <http://schema.org/description> "KÃ¶ln"@en;
     <http://schema.org/name> "DECGN"@en;
-    crt:name "Köln, Deutschland";
+    crt:name "KÃ¶ln, Deutschland";
     a crt:Place;
     <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://www.covid-rdf-tracker.com/graph>;
     <http://www.w3.org/2000/01/rdf-schema#label> "DECGN".
-crt:DEMUC <http://schema.org/description> "München"@en;
-    <http://schema.org/name> "DEMUC"@en;
-    crt:name "München, Deutschland";
+crt:BAMUC <http://schema.org/description> "MÃ¼nchen"@en;
+    <http://schema.org/name> "BAMUC"@en;
+    crt:name "MÃ¼nchen, Bayern";
     a crt:Place;
     <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://www.covid-rdf-tracker.com/graph>;
-    <http://www.w3.org/2000/01/rdf-schema#label> "DEMUC".
+    <http://www.w3.org/2000/01/rdf-schema#label> "BAMUC".
 crt:diagnosis <http://schema.org/dateCreated> "2020-09-07T16:16:16.000Z"^^<http://www.w3.org/2001/XMLSchema#dateTime>;
     <http://schema.org/dateModified> "2020-09-07T16:16:16.000Z"^^<http://www.w3.org/2001/XMLSchema#dateTime>;
     <http://schema.org/description> "Describes a person's infectious disease."@en;
@@ -107,31 +114,84 @@ crt:diagnosis <http://schema.org/dateCreated> "2020-09-07T16:16:16.000Z"^^<http:
     <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://www.covid-rdf-tracker.com/graph>;
     <http://www.w3.org/2000/01/rdf-schema#label> "diagnosis";
     <http://www.w3.org/2000/01/rdf-schema#range> crt:InfectiousDisease.
-crt:DSPHLW <http://schema.org/description> ""@en;
+crt:DSPHLW <http://schema.org/description> "Fictional code generated on https://www.randomcodegenerator.com/en/generate-codes@length6#result."@en;
     <http://schema.org/name> "DSPHLW"@en;
+    crt:encounter crt:ENC_DECGN;
     a crt:Person;
     <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://www.covid-rdf-tracker.com/graph>;
     <http://www.w3.org/2000/01/rdf-schema#label> "DSPHLW".
-crt:DTRKNE <http://schema.org/description> ""@en;
+crt:DTRKNE <http://schema.org/description> "Fictional code generated on https://www.randomcodegenerator.com/en/generate-codes@length6#result."@en;
     <http://schema.org/name> "DTRKNE"@en;
+    crt:encounter crt:ENC_BAMUC;
     a crt:Person;
     <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://www.covid-rdf-tracker.com/graph>;
     <http://www.w3.org/2000/01/rdf-schema#label> "DTRKNE".
-crt:DUWDWN <http://schema.org/description> ""@en;
+crt:DUWDWN <http://schema.org/description> "Fictional code generated on https://www.randomcodegenerator.com/en/generate-codes@length6#result."@en;
     <http://schema.org/name> "DUWDWN"@en;
+    crt:encounter crt:ENC_IRBAC;
     a crt:Person;
     <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://www.covid-rdf-tracker.com/graph>;
     <http://www.w3.org/2000/01/rdf-schema#label> "DUWDWN".
-crt:EAFMKE <http://schema.org/description> ""@en;
+crt:EAFMKE <http://schema.org/description> "Fictional code generated on https://www.randomcodegenerator.com/en/generate-codes@length6#result."@en;
     <http://schema.org/name> "EAFMKE"@en;
+    crt:encounter crt:ENC_IRBAC;
     a crt:Person;
     <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://www.covid-rdf-tracker.com/graph>;
     <http://www.w3.org/2000/01/rdf-schema#label> "EAFMKE".
-crt:EKGFKJ <http://schema.org/description> ""@en;
+crt:EKGFKJ <http://schema.org/description> "Fictional code generated on https://www.randomcodegenerator.com/en/generate-codes@length6#result."@en;
     <http://schema.org/name> "EKGFKJ"@en;
+    crt:encounter crt:ENC_BAMUC;
     a crt:Person;
     <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://www.covid-rdf-tracker.com/graph>;
     <http://www.w3.org/2000/01/rdf-schema#label> "EKGFKJ".
+crt:ENC_DEBER <http://schema.org/description> "Encounter in Berlin (10 people)"@en;
+    <http://schema.org/name> "ENC-DEBER"@en;
+    crt:dateEncountered "2020-09-23T00:00:00.000Z"^^<http://www.w3.org/2001/XMLSchema#dateTime>;
+    crt:person crt:PVTCUS, crt:ZNSUGM, crt:SQQTAZ, crt:QCASYA, crt:RATJEP, crt:ZXRTUW, crt:VJUAKW, crt:KLEDMH, crt:FXVJXS, crt:ZYAGCY;
+    crt:place crt:DEBER;
+    a crt:Encounter;
+    <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://www.covid-rdf-tracker.com/graph>;
+    <http://www.w3.org/2000/01/rdf-schema#label> "ENC_DEBER".
+crt:ENC_DECGN <http://schema.org/description> "Encounter in Cologne (3 people)"@en;
+    <http://schema.org/name> "ENC-DECGN"@en;
+    crt:dateEncountered "2020-09-23T00:00:00.000Z"^^<http://www.w3.org/2001/XMLSchema#dateTime>;
+    crt:person crt:DSPHLW, crt:WHCWPA, crt:JCBVVF;
+    crt:place crt:DECGN;
+    a crt:Encounter;
+    <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://www.covid-rdf-tracker.com/graph>;
+    <http://www.w3.org/2000/01/rdf-schema#label> "ENC_DECGN".
+crt:ENC_BAMUC <http://schema.org/description> "Encounter in Munich (7 people)"@en;
+    <http://schema.org/name> "ENC-BAMUC"@en;
+    crt:dateEncountered "2020-09-23T00:00:00.000Z"^^<http://www.w3.org/2001/XMLSchema#dateTime>;
+    crt:person crt:CLCDJG, crt:SXJMXE, crt:UYPCAT, crt:BPZJGG, crt:LUZULZ, crt:DTRKNE, crt:EKGFKJ;
+    crt:place crt:BAMUC;
+    a crt:Encounter;
+    <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://www.covid-rdf-tracker.com/graph>;
+    <http://www.w3.org/2000/01/rdf-schema#label> "ENC_BAMUC".
+crt:ENC_IRBAC <http://schema.org/description> "Encounter in Dublin (9 people)"@en;
+    <http://schema.org/name> "ENC-IRBAC"@en;
+    crt:dateEncountered "2020-09-23T00:00:00.000Z"^^<http://www.w3.org/2001/XMLSchema#dateTime>;
+    crt:person crt:QMTWAE, crt:DUWDWN, crt:ULKQUF, crt:VTGSHK, crt:XNMZNP, crt:CDPVQF, crt:MMGPDN, crt:RNTQED, crt:EAFMKE;
+    crt:place crt:IRBAC;
+    a crt:Encounter;
+    <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://www.covid-rdf-tracker.com/graph>;
+    <http://www.w3.org/2000/01/rdf-schema#label> "ENC_IRBAC".
+crt:ENC_CABCN <http://schema.org/description> "Encounter in Barcelona (8 people)"@en;
+    <http://schema.org/name> "ENC-CABCN"@en;
+    crt:dateEncountered "2020-09-23T00:00:00.000Z"^^<http://www.w3.org/2001/XMLSchema#dateTime>;
+    crt:person crt:WUJVBR, crt:PGADMP, crt:XPHVZD, crt:XWDBGX, crt:NSTEBX, crt:GWAXBD, crt:KHMFHS, crt:GAXCXS;
+    crt:place crt:CABCN;
+    a crt:Encounter;
+    <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://www.covid-rdf-tracker.com/graph>;
+    <http://www.w3.org/2000/01/rdf-schema#label> "ENC_CABCN".
+crt:ENC_FRPAR <http://schema.org/description> "Encounter in Paris (13 people)"@en;
+    <http://schema.org/name> "ENC-FRPAR"@en;
+    crt:dateEncountered "2020-09-23T00:00:00.000Z"^^<http://www.w3.org/2001/XMLSchema#dateTime>;
+    crt:person crt:BQKPSX, crt:CKQSYV, crt:YJZTNH, crt:TXMXJP, crt:BFLBQX, crt:NDBXCL, crt:QCCLHW, crt:HHGTCF, crt:CKXBAN, crt:NABKZM, crt:HZFLJF, crt:STRVYT, crt:WFZDWR;
+    crt:place crt:FRPAR;
+    a crt:Encounter;
+    <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://www.covid-rdf-tracker.com/graph>;
+    <http://www.w3.org/2000/01/rdf-schema#label> "ENC_FRPAR".
 crt:encounter <http://schema.org/dateCreated> "2020-09-07T16:13:11.000Z"^^<http://www.w3.org/2001/XMLSchema#dateTime>;
     <http://schema.org/dateModified> "2020-09-07T16:13:11.000Z"^^<http://www.w3.org/2001/XMLSchema#dateTime>;
     <http://schema.org/description> "Describes a person's encounter with other people at a certain physical location."@en;
@@ -148,46 +208,51 @@ crt:Encounter <http://schema.org/dateCreated> "2020-09-07T15:57:06.000Z"^^<http:
     a <http://www.w3.org/2000/01/rdf-schema#Class>;
     <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://www.covid-rdf-tracker.com/graph>;
     <http://www.w3.org/2000/01/rdf-schema#label> "Encounter".
-crt:ENLDN <http://schema.org/description> "London"@en;
-    <http://schema.org/name> "ENLDN"@en;
-    crt:name "London, England";
+crt:IRBAC <http://schema.org/description> "Dublin"@en;
+    <http://schema.org/name> "IRBAC"@en;
+    crt:name "Dublin, Ireland";
     a crt:Place;
     <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://www.covid-rdf-tracker.com/graph>;
-    <http://www.w3.org/2000/01/rdf-schema#label> "ENLDN".
-crt:ESBCN <http://schema.org/description> "Barcelona"@en;
-    <http://schema.org/name> "ESBCN"@en;
-    crt:name "Barcelona, España";
+    <http://www.w3.org/2000/01/rdf-schema#label> "IRBAC".
+crt:CABCN <http://schema.org/description> "Barcelona"@en;
+    <http://schema.org/name> "CABCN"@en;
+    crt:name "Barcelona, Catalunya";
     a crt:Place;
     <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://www.covid-rdf-tracker.com/graph>;
-    <http://www.w3.org/2000/01/rdf-schema#label> "ESBCN".
+    <http://www.w3.org/2000/01/rdf-schema#label> "CABCN".
 crt:FRPAR <http://schema.org/description> "Paris"@en;
     <http://schema.org/name> "FRPAR"@en;
     crt:name "Paris, France";
     a crt:Place;
     <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://www.covid-rdf-tracker.com/graph>;
     <http://www.w3.org/2000/01/rdf-schema#label> "FRPAR".
-crt:FXVJXS <http://schema.org/description> ""@en;
+crt:FXVJXS <http://schema.org/description> "Fictional code generated on https://www.randomcodegenerator.com/en/generate-codes@length6#result."@en;
     <http://schema.org/name> "FXVJXS"@en;
+    crt:encounter crt:ENC_DEBER;
     a crt:Person;
     <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://www.covid-rdf-tracker.com/graph>;
     <http://www.w3.org/2000/01/rdf-schema#label> "FXVJXS".
-crt:GAXCXS <http://schema.org/description> ""@en;
+crt:GAXCXS <http://schema.org/description> "Fictional code generated on https://www.randomcodegenerator.com/en/generate-codes@length6#result."@en;
     <http://schema.org/name> "GAXCXS"@en;
+    crt:encounter crt:ENC_CABCN;
     a crt:Person;
     <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://www.covid-rdf-tracker.com/graph>;
     <http://www.w3.org/2000/01/rdf-schema#label> "GAXCXS".
-crt:GWAXBD <http://schema.org/description> ""@en;
+crt:GWAXBD <http://schema.org/description> "Fictional code generated on https://www.randomcodegenerator.com/en/generate-codes@length6#result."@en;
     <http://schema.org/name> "GWAXBD"@en;
+    crt:encounter crt:ENC_CABCN;
     a crt:Person;
     <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://www.covid-rdf-tracker.com/graph>;
     <http://www.w3.org/2000/01/rdf-schema#label> "GWAXBD".
-crt:HHGTCF <http://schema.org/description> ""@en;
+crt:HHGTCF <http://schema.org/description> "Fictional code generated on https://www.randomcodegenerator.com/en/generate-codes@length6#result."@en;
     <http://schema.org/name> "HHGTCF"@en;
+    crt:encounter crt:ENC_FRPAR;
     a crt:Person;
     <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://www.covid-rdf-tracker.com/graph>;
     <http://www.w3.org/2000/01/rdf-schema#label> "HHGTCF".
-crt:HZFLJF <http://schema.org/description> ""@en;
+crt:HZFLJF <http://schema.org/description> "Fictional code generated on https://www.randomcodegenerator.com/en/generate-codes@length6#result."@en;
     <http://schema.org/name> "HZFLJF"@en;
+    crt:encounter crt:ENC_FRPAR;
     a crt:Person;
     <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://www.covid-rdf-tracker.com/graph>;
     <http://www.w3.org/2000/01/rdf-schema#label> "HZFLJF".
@@ -199,33 +264,39 @@ crt:InfectiousDisease <http://schema.org/dateCreated> "2020-09-07T16:07:36.000Z"
     <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://www.covid-rdf-tracker.com/graph>;
     <http://www.w3.org/2000/01/rdf-schema#label> "InfectiousDisease";
     <http://www.w3.org/ns/prov#> "http://schema.org/InfectiousDisease".
-crt:JCBVVF <http://schema.org/description> ""@en;
+crt:JCBVVF <http://schema.org/description> "Fictional code generated on https://www.randomcodegenerator.com/en/generate-codes@length6#result."@en;
     <http://schema.org/name> "JCBVVF"@en;
+    crt:encounter crt:ENC_DECGN;
     a crt:Person;
     <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://www.covid-rdf-tracker.com/graph>;
     <http://www.w3.org/2000/01/rdf-schema#label> "JCBVVF".
-crt:KHMFHS <http://schema.org/description> ""@en;
+crt:KHMFHS <http://schema.org/description> "Fictional code generated on https://www.randomcodegenerator.com/en/generate-codes@length6#result."@en;
     <http://schema.org/name> "KHMFHS"@en;
+    crt:encounter crt:ENC_CABCN;
     a crt:Person;
     <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://www.covid-rdf-tracker.com/graph>;
     <http://www.w3.org/2000/01/rdf-schema#label> "KHMFHS".
-crt:KLEDMH <http://schema.org/description> ""@en;
+crt:KLEDMH <http://schema.org/description> "Fictional code generated on https://www.randomcodegenerator.com/en/generate-codes@length6#result."@en;
     <http://schema.org/name> "KLEDMH"@en;
+    crt:encounter crt:ENC_DEBER;
     a crt:Person;
     <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://www.covid-rdf-tracker.com/graph>;
     <http://www.w3.org/2000/01/rdf-schema#label> "KLEDMH".
-crt:LUZULZ <http://schema.org/description> ""@en;
+crt:LUZULZ <http://schema.org/description> "Fictional code generated on https://www.randomcodegenerator.com/en/generate-codes@length6#result."@en;
     <http://schema.org/name> "LUZULZ"@en;
+    crt:encounter crt:ENC_BAMUC;
     a crt:Person;
     <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://www.covid-rdf-tracker.com/graph>;
     <http://www.w3.org/2000/01/rdf-schema#label> "LUZULZ".
-crt:MMGPDN <http://schema.org/description> ""@en;
+crt:MMGPDN <http://schema.org/description> "Fictional code generated on https://www.randomcodegenerator.com/en/generate-codes@length6#result."@en;
     <http://schema.org/name> "MMGPDN"@en;
+    crt:encounter crt:ENC_IRBAC;
     a crt:Person;
     <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://www.covid-rdf-tracker.com/graph>;
     <http://www.w3.org/2000/01/rdf-schema#label> "MMGPDN".
-crt:NABKZM <http://schema.org/description> ""@en;
+crt:NABKZM <http://schema.org/description> "Fictional code generated on https://www.randomcodegenerator.com/en/generate-codes@length6#result."@en;
     <http://schema.org/name> "NABKZM"@en;
+    crt:encounter crt:ENC_FRPAR;
     a crt:Person;
     <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://www.covid-rdf-tracker.com/graph>;
     <http://www.w3.org/2000/01/rdf-schema#label> "NABKZM".
@@ -241,13 +312,15 @@ crt:name <http://schema.org/dateCreated> "2020-09-08T13:26:07.000Z"^^<http://www
     <http://www.w3.org/ns/prov#> "http://dbpedia.org/ontology/book";
     <http://www.w3.org/ns/shacl#maxCount> "1"^^<http://www.w3.org/2001/XMLSchema#integer>;
     <http://www.w3.org/ns/shacl#minCount> "1"^^<http://www.w3.org/2001/XMLSchema#integer>.
-crt:NDBXCL <http://schema.org/description> ""@en;
+crt:NDBXCL <http://schema.org/description> "Fictional code generated on https://www.randomcodegenerator.com/en/generate-codes@length6#result."@en;
     <http://schema.org/name> "NDBXCL"@en;
+    crt:encounter crt:ENC_FRPAR;
     a crt:Person;
     <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://www.covid-rdf-tracker.com/graph>;
     <http://www.w3.org/2000/01/rdf-schema#label> "NDBXCL".
-crt:NSTEBX <http://schema.org/description> ""@en;
+crt:NSTEBX <http://schema.org/description> "Fictional code generated on https://www.randomcodegenerator.com/en/generate-codes@length6#result."@en;
     <http://schema.org/name> "NSTEBX"@en;
+    crt:encounter crt:ENC_CABCN;
     a crt:Person;
     <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://www.covid-rdf-tracker.com/graph>;
     <http://www.w3.org/2000/01/rdf-schema#label> "NSTEBX".
@@ -268,8 +341,9 @@ crt:Person <http://schema.org/dateCreated> "2020-09-07T16:07:23.000Z"^^<http://w
     <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://www.covid-rdf-tracker.com/graph>;
     <http://www.w3.org/2000/01/rdf-schema#label> "Person";
     <http://www.w3.org/ns/prov#> "http://schema.org/Person".
-crt:PGADMP <http://schema.org/description> ""@en;
+crt:PGADMP <http://schema.org/description> "Fictional code generated on https://www.randomcodegenerator.com/en/generate-codes@length6#result."@en;
     <http://schema.org/name> "PGADMP"@en;
+    crt:encounter crt:ENC_CABCN;
     a crt:Person;
     <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://www.covid-rdf-tracker.com/graph>;
     <http://www.w3.org/2000/01/rdf-schema#label> "PGADMP".
@@ -290,123 +364,147 @@ crt:Place <http://schema.org/dateCreated> "2020-09-07T16:07:02.000Z"^^<http://ww
     <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://www.covid-rdf-tracker.com/graph>;
     <http://www.w3.org/2000/01/rdf-schema#label> "Place";
     <http://www.w3.org/ns/prov#> "http://schema.org/Place".
-crt:PVTCUS <http://schema.org/description> ""@en;
+crt:PVTCUS <http://schema.org/description> "Fictional code generated on https://www.randomcodegenerator.com/en/generate-codes@length6#result."@en;
     <http://schema.org/name> "PVTCUS"@en;
+    crt:encounter crt:ENC_DEBER;
     a crt:Person;
     <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://www.covid-rdf-tracker.com/graph>;
     <http://www.w3.org/2000/01/rdf-schema#label> "PVTCUS".
-crt:QCASYA <http://schema.org/description> ""@en;
+crt:QCASYA <http://schema.org/description> "Fictional code generated on https://www.randomcodegenerator.com/en/generate-codes@length6#result."@en;
     <http://schema.org/name> "QCASYA"@en;
+    crt:encounter crt:ENC_DEBER;
     a crt:Person;
     <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://www.covid-rdf-tracker.com/graph>;
     <http://www.w3.org/2000/01/rdf-schema#label> "QCASYA".
-crt:QCCLHW <http://schema.org/description> ""@en;
+crt:QCCLHW <http://schema.org/description> "Fictional code generated on https://www.randomcodegenerator.com/en/generate-codes@length6#result."@en;
     <http://schema.org/name> "QCCLHW"@en;
+    crt:encounter crt:ENC_FRPAR;
     a crt:Person;
     <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://www.covid-rdf-tracker.com/graph>;
     <http://www.w3.org/2000/01/rdf-schema#label> "QCCLHW".
-crt:QMTWAE <http://schema.org/description> ""@en;
+crt:QMTWAE <http://schema.org/description> "Fictional code generated on https://www.randomcodegenerator.com/en/generate-codes@length6#result."@en;
     <http://schema.org/name> "QMTWAE"@en;
+    crt:encounter crt:ENC_IRBAC;
     a crt:Person;
     <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://www.covid-rdf-tracker.com/graph>;
     <http://www.w3.org/2000/01/rdf-schema#label> "QMTWAE".
-crt:RATJEP <http://schema.org/description> ""@en;
+crt:RATJEP <http://schema.org/description> "Fictional code generated on https://www.randomcodegenerator.com/en/generate-codes@length6#result."@en;
     <http://schema.org/name> "RATJEP"@en;
+    crt:encounter crt:ENC_DEBER;
     a crt:Person;
     <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://www.covid-rdf-tracker.com/graph>;
     <http://www.w3.org/2000/01/rdf-schema#label> "RATJEP".
-crt:RNTQED <http://schema.org/description> ""@en;
+crt:RNTQED <http://schema.org/description> "Fictional code generated on https://www.randomcodegenerator.com/en/generate-codes@length6#result."@en;
     <http://schema.org/name> "RNTQED"@en;
+    crt:encounter crt:ENC_IRBAC;
     a crt:Person;
     <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://www.covid-rdf-tracker.com/graph>;
     <http://www.w3.org/2000/01/rdf-schema#label> "RNTQED".
-crt:SQQTAZ <http://schema.org/description> ""@en;
+crt:SQQTAZ <http://schema.org/description> "Fictional code generated on https://www.randomcodegenerator.com/en/generate-codes@length6#result."@en;
     <http://schema.org/name> "SQQTAZ"@en;
+    crt:encounter crt:ENC_DEBER;
     a crt:Person;
     <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://www.covid-rdf-tracker.com/graph>;
     <http://www.w3.org/2000/01/rdf-schema#label> "SQQTAZ".
-crt:STRVYT <http://schema.org/description> ""@en;
+crt:STRVYT <http://schema.org/description> "Fictional code generated on https://www.randomcodegenerator.com/en/generate-codes@length6#result."@en;
     <http://schema.org/name> "STRVYT"@en;
+    crt:encounter crt:ENC_FRPAR;
     a crt:Person;
     <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://www.covid-rdf-tracker.com/graph>;
     <http://www.w3.org/2000/01/rdf-schema#label> "STRVYT".
-crt:SXJMXE <http://schema.org/description> ""@en;
+crt:SXJMXE <http://schema.org/description> "Fictional code generated on https://www.randomcodegenerator.com/en/generate-codes@length6#result."@en;
     <http://schema.org/name> "SXJMXE"@en;
+    crt:encounter crt:ENC_BAMUC;
     a crt:Person;
     <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://www.covid-rdf-tracker.com/graph>;
     <http://www.w3.org/2000/01/rdf-schema#label> "SXJMXE".
-crt:TXMXJP <http://schema.org/description> ""@en;
+crt:TXMXJP <http://schema.org/description> "Fictional code generated on https://www.randomcodegenerator.com/en/generate-codes@length6#result."@en;
     <http://schema.org/name> "TXMXJP"@en;
+    crt:encounter crt:ENC_FRPAR;
     a crt:Person;
     <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://www.covid-rdf-tracker.com/graph>;
     <http://www.w3.org/2000/01/rdf-schema#label> "TXMXJP".
-crt:ULKQUF <http://schema.org/description> ""@en;
+crt:ULKQUF <http://schema.org/description> "Fictional code generated on https://www.randomcodegenerator.com/en/generate-codes@length6#result."@en;
     <http://schema.org/name> "ULKQUF"@en;
+    crt:encounter crt:ENC_IRBAC;
     a crt:Person;
     <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://www.covid-rdf-tracker.com/graph>;
     <http://www.w3.org/2000/01/rdf-schema#label> "ULKQUF".
-crt:UYPCAT <http://schema.org/description> ""@en;
+crt:UYPCAT <http://schema.org/description> "Fictional code generated on https://www.randomcodegenerator.com/en/generate-codes@length6#result."@en;
     <http://schema.org/name> "UYPCAT"@en;
+    crt:encounter crt:ENC_BAMUC;
     a crt:Person;
     <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://www.covid-rdf-tracker.com/graph>;
     <http://www.w3.org/2000/01/rdf-schema#label> "UYPCAT".
-crt:VJUAKW <http://schema.org/description> ""@en;
+crt:VJUAKW <http://schema.org/description> "Fictional code generated on https://www.randomcodegenerator.com/en/generate-codes@length6#result."@en;
     <http://schema.org/name> "VJUAKW"@en;
+    crt:encounter crt:ENC_DEBER;
     a crt:Person;
     <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://www.covid-rdf-tracker.com/graph>;
     <http://www.w3.org/2000/01/rdf-schema#label> "VJUAKW".
-crt:VTGSHK <http://schema.org/description> ""@en;
+crt:VTGSHK <http://schema.org/description> "Fictional code generated on https://www.randomcodegenerator.com/en/generate-codes@length6#result."@en;
     <http://schema.org/name> "VTGSHK"@en;
+    crt:encounter crt:ENC_IRBAC;
     a crt:Person;
     <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://www.covid-rdf-tracker.com/graph>;
     <http://www.w3.org/2000/01/rdf-schema#label> "VTGSHK".
-crt:WFZDWR <http://schema.org/description> ""@en;
+crt:WFZDWR <http://schema.org/description> "Fictional code generated on https://www.randomcodegenerator.com/en/generate-codes@length6#result."@en;
     <http://schema.org/name> "WFZDWR"@en;
+    crt:encounter crt:ENC_FRPAR;
     a crt:Person;
     <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://www.covid-rdf-tracker.com/graph>;
     <http://www.w3.org/2000/01/rdf-schema#label> "WFZDWR".
-crt:WHCWPA <http://schema.org/description> ""@en;
+crt:WHCWPA <http://schema.org/description> "Fictional code generated on https://www.randomcodegenerator.com/en/generate-codes@length6#result."@en;
     <http://schema.org/name> "WHCWPA"@en;
+    crt:encounter crt:ENC_DECGN;
     a crt:Person;
     <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://www.covid-rdf-tracker.com/graph>;
     <http://www.w3.org/2000/01/rdf-schema#label> "WHCWPA".
-crt:WUJVBR <http://schema.org/description> ""@en;
+crt:WUJVBR <http://schema.org/description> "Fictional code generated on https://www.randomcodegenerator.com/en/generate-codes@length6#result."@en;
     <http://schema.org/name> "WUJVBR"@en;
+    crt:encounter crt:ENC_CABCN;
     a crt:Person;
     <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://www.covid-rdf-tracker.com/graph>;
     <http://www.w3.org/2000/01/rdf-schema#label> "WUJVBR".
-crt:XNMZNP <http://schema.org/description> ""@en;
+crt:XNMZNP <http://schema.org/description> "Fictional code generated on https://www.randomcodegenerator.com/en/generate-codes@length6#result."@en;
     <http://schema.org/name> "XNMZNP"@en;
+    crt:encounter crt:ENC_IRBAC;
     a crt:Person;
     <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://www.covid-rdf-tracker.com/graph>;
     <http://www.w3.org/2000/01/rdf-schema#label> "XNMZNP".
-crt:XPHVZD <http://schema.org/description> ""@en;
+crt:XPHVZD <http://schema.org/description> "Fictional code generated on https://www.randomcodegenerator.com/en/generate-codes@length6#result."@en;
     <http://schema.org/name> "XPHVZD"@en;
+    crt:encounter crt:ENC_CABCN;
     a crt:Person;
     <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://www.covid-rdf-tracker.com/graph>;
     <http://www.w3.org/2000/01/rdf-schema#label> "XPHVZD".
-crt:XWDBGX <http://schema.org/description> ""@en;
+crt:XWDBGX <http://schema.org/description> "Fictional code generated on https://www.randomcodegenerator.com/en/generate-codes@length6#result."@en;
     <http://schema.org/name> "XWDBGX"@en;
+    crt:encounter crt:ENC_CABCN;
     a crt:Person;
     <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://www.covid-rdf-tracker.com/graph>;
     <http://www.w3.org/2000/01/rdf-schema#label> "XWDBGX".
-crt:YJZTNH <http://schema.org/description> ""@en;
+crt:YJZTNH <http://schema.org/description> "Fictional code generated on https://www.randomcodegenerator.com/en/generate-codes@length6#result."@en;
     <http://schema.org/name> "YJZTNH"@en;
+    crt:encounter crt:ENC_FRPAR;
     a crt:Person;
     <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://www.covid-rdf-tracker.com/graph>;
     <http://www.w3.org/2000/01/rdf-schema#label> "YJZTNH".
-crt:ZNSUGM <http://schema.org/description> ""@en;
+crt:ZNSUGM <http://schema.org/description> "Fictional code generated on https://www.randomcodegenerator.com/en/generate-codes@length6#result."@en;
     <http://schema.org/name> "ZNSUGM"@en;
+    crt:encounter crt:ENC_DEBER;
     a crt:Person;
     <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://www.covid-rdf-tracker.com/graph>;
     <http://www.w3.org/2000/01/rdf-schema#label> "ZNSUGM".
-crt:ZXRTUW <http://schema.org/description> ""@en;
+crt:ZXRTUW <http://schema.org/description> "Fictional code generated on https://www.randomcodegenerator.com/en/generate-codes@length6#result."@en;
     <http://schema.org/name> "ZXRTUW"@en;
+    crt:encounter crt:ENC_DEBER;
     a crt:Person;
     <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://www.covid-rdf-tracker.com/graph>;
     <http://www.w3.org/2000/01/rdf-schema#label> "ZXRTUW".
-crt:ZYAGCY <http://schema.org/description> ""@en;
+crt:ZYAGCY <http://schema.org/description> "Fictional code generated on https://www.randomcodegenerator.com/en/generate-codes@length6#result."@en;
     <http://schema.org/name> "ZYAGCY"@en;
+    crt:encounter crt:ENC_DEBER;
     a crt:Person;
     <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://www.covid-rdf-tracker.com/graph>;
     <http://www.w3.org/2000/01/rdf-schema#label> "ZYAGCY".

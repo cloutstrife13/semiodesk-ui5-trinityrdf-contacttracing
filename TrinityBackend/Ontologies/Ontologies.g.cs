@@ -1,5 +1,5 @@
 // Attention: This file is generated. Any modifications will eventually be overwritten.
-// Date: 08/09/2020 17:34:44
+// Date: 08/09/2020 20:53:23
 
 using System;
 using System.Collections.Generic;
@@ -1567,9 +1567,9 @@ public class crt : Ontology
 
     ///<summary>
     ///
-    ///<see cref="http://www.covid-rdf-tracker.com/graph#DEMUC"/>
+    ///<see cref="http://www.covid-rdf-tracker.com/graph#BAMUC"/>
     ///</summary>
-    public static readonly Resource DEMUC = new Resource(new Uri("http://www.covid-rdf-tracker.com/graph#DEMUC"));    
+    public static readonly Resource BAMUC = new Resource(new Uri("http://www.covid-rdf-tracker.com/graph#BAMUC"));    
 
     ///<summary>
     ///
@@ -1609,6 +1609,42 @@ public class crt : Ontology
 
     ///<summary>
     ///
+    ///<see cref="http://www.covid-rdf-tracker.com/graph#ENC_DEBER"/>
+    ///</summary>
+    public static readonly Resource ENC_DEBER = new Resource(new Uri("http://www.covid-rdf-tracker.com/graph#ENC_DEBER"));    
+
+    ///<summary>
+    ///
+    ///<see cref="http://www.covid-rdf-tracker.com/graph#ENC_DECGN"/>
+    ///</summary>
+    public static readonly Resource ENC_DECGN = new Resource(new Uri("http://www.covid-rdf-tracker.com/graph#ENC_DECGN"));    
+
+    ///<summary>
+    ///
+    ///<see cref="http://www.covid-rdf-tracker.com/graph#ENC_BAMUC"/>
+    ///</summary>
+    public static readonly Resource ENC_BAMUC = new Resource(new Uri("http://www.covid-rdf-tracker.com/graph#ENC_BAMUC"));    
+
+    ///<summary>
+    ///
+    ///<see cref="http://www.covid-rdf-tracker.com/graph#ENC_IRBAC"/>
+    ///</summary>
+    public static readonly Resource ENC_IRBAC = new Resource(new Uri("http://www.covid-rdf-tracker.com/graph#ENC_IRBAC"));    
+
+    ///<summary>
+    ///
+    ///<see cref="http://www.covid-rdf-tracker.com/graph#ENC_CABCN"/>
+    ///</summary>
+    public static readonly Resource ENC_CABCN = new Resource(new Uri("http://www.covid-rdf-tracker.com/graph#ENC_CABCN"));    
+
+    ///<summary>
+    ///
+    ///<see cref="http://www.covid-rdf-tracker.com/graph#ENC_FRPAR"/>
+    ///</summary>
+    public static readonly Resource ENC_FRPAR = new Resource(new Uri("http://www.covid-rdf-tracker.com/graph#ENC_FRPAR"));    
+
+    ///<summary>
+    ///
     ///<see cref="http://www.covid-rdf-tracker.com/graph#encounter"/>
     ///</summary>
     public static readonly Property encounter = new Property(new Uri("http://www.covid-rdf-tracker.com/graph#encounter"));    
@@ -1621,15 +1657,15 @@ public class crt : Ontology
 
     ///<summary>
     ///
-    ///<see cref="http://www.covid-rdf-tracker.com/graph#ENLDN"/>
+    ///<see cref="http://www.covid-rdf-tracker.com/graph#IRBAC"/>
     ///</summary>
-    public static readonly Resource ENLDN = new Resource(new Uri("http://www.covid-rdf-tracker.com/graph#ENLDN"));    
+    public static readonly Resource IRBAC = new Resource(new Uri("http://www.covid-rdf-tracker.com/graph#IRBAC"));    
 
     ///<summary>
     ///
-    ///<see cref="http://www.covid-rdf-tracker.com/graph#ESBCN"/>
+    ///<see cref="http://www.covid-rdf-tracker.com/graph#CABCN"/>
     ///</summary>
-    public static readonly Resource ESBCN = new Resource(new Uri("http://www.covid-rdf-tracker.com/graph#ESBCN"));    
+    public static readonly Resource CABCN = new Resource(new Uri("http://www.covid-rdf-tracker.com/graph#CABCN"));    
 
     ///<summary>
     ///
@@ -1993,9 +2029,9 @@ public static class CRT
 
     ///<summary>
     ///
-    ///<see cref="http://www.covid-rdf-tracker.com/graph#DEMUC"/>
+    ///<see cref="http://www.covid-rdf-tracker.com/graph#BAMUC"/>
     ///</summary>
-    public const string DEMUC = "http://www.covid-rdf-tracker.com/graph#DEMUC";
+    public const string BAMUC = "http://www.covid-rdf-tracker.com/graph#BAMUC";
 
     ///<summary>
     ///
@@ -2035,6 +2071,42 @@ public static class CRT
 
     ///<summary>
     ///
+    ///<see cref="http://www.covid-rdf-tracker.com/graph#ENC_DEBER"/>
+    ///</summary>
+    public const string ENC_DEBER = "http://www.covid-rdf-tracker.com/graph#ENC_DEBER";
+
+    ///<summary>
+    ///
+    ///<see cref="http://www.covid-rdf-tracker.com/graph#ENC_DECGN"/>
+    ///</summary>
+    public const string ENC_DECGN = "http://www.covid-rdf-tracker.com/graph#ENC_DECGN";
+
+    ///<summary>
+    ///
+    ///<see cref="http://www.covid-rdf-tracker.com/graph#ENC_BAMUC"/>
+    ///</summary>
+    public const string ENC_BAMUC = "http://www.covid-rdf-tracker.com/graph#ENC_BAMUC";
+
+    ///<summary>
+    ///
+    ///<see cref="http://www.covid-rdf-tracker.com/graph#ENC_IRBAC"/>
+    ///</summary>
+    public const string ENC_IRBAC = "http://www.covid-rdf-tracker.com/graph#ENC_IRBAC";
+
+    ///<summary>
+    ///
+    ///<see cref="http://www.covid-rdf-tracker.com/graph#ENC_CABCN"/>
+    ///</summary>
+    public const string ENC_CABCN = "http://www.covid-rdf-tracker.com/graph#ENC_CABCN";
+
+    ///<summary>
+    ///
+    ///<see cref="http://www.covid-rdf-tracker.com/graph#ENC_FRPAR"/>
+    ///</summary>
+    public const string ENC_FRPAR = "http://www.covid-rdf-tracker.com/graph#ENC_FRPAR";
+
+    ///<summary>
+    ///
     ///<see cref="http://www.covid-rdf-tracker.com/graph#encounter"/>
     ///</summary>
     public const string encounter = "http://www.covid-rdf-tracker.com/graph#encounter";
@@ -2047,15 +2119,15 @@ public static class CRT
 
     ///<summary>
     ///
-    ///<see cref="http://www.covid-rdf-tracker.com/graph#ENLDN"/>
+    ///<see cref="http://www.covid-rdf-tracker.com/graph#IRBAC"/>
     ///</summary>
-    public const string ENLDN = "http://www.covid-rdf-tracker.com/graph#ENLDN";
+    public const string IRBAC = "http://www.covid-rdf-tracker.com/graph#IRBAC";
 
     ///<summary>
     ///
-    ///<see cref="http://www.covid-rdf-tracker.com/graph#ESBCN"/>
+    ///<see cref="http://www.covid-rdf-tracker.com/graph#CABCN"/>
     ///</summary>
-    public const string ESBCN = "http://www.covid-rdf-tracker.com/graph#ESBCN";
+    public const string CABCN = "http://www.covid-rdf-tracker.com/graph#CABCN";
 
     ///<summary>
     ///

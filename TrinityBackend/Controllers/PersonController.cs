@@ -4,7 +4,6 @@ using Microsoft.AspNet.OData;
 using Microsoft.AspNet.OData.Routing;
 using Microsoft.AspNetCore.Mvc;
 using System;
-using System.Collections.Generic;
 
 namespace ContactTracingGraph.Controllers
 {
@@ -54,15 +53,37 @@ namespace ContactTracingGraph.Controllers
         }
 
         [HttpPost, ODataRoute("RetrieveDiagnosis")]
-        public IActionResult RetrieveDiagnosis(ODataActionParameters p)
+        public IActionResult RetrieveDiagnosis(ODataActionParameters parameter)
         {
-            //var types = ((IEnumerable<string>)parameters["Types"]).ToList();
-            //var typeUri = e2r.RetrieveClassTypeUri(types);
+            string ID = parameter["ID"].ToString();
 
-            //var type = types[types.Count - 1];
-            //type.ID = typeUri.Fragment.Substring(1);
+            if (ID.Length > 0)
+            {
+                dynamic p = repo.Read().Find(p => p.ID == ID);
 
-            return Ok(null);
+                if (p != null)
+                {
+                    // 1. Record current time
+                    var timeStampNow = DateTime.Now;
+
+                    // 2. Instantiate new Diagnosis
+                    InfectiousDisease d = new InfectiousDisease($"COVID19_{timeStampNow.ToString("HHmmssddMMyyyy")}");
+                    d.Classification = "COVID-19";
+                    d.DateDiagnosed = timeStampNow;
+
+                    // 3. Bind the newly created individual to the database
+                    d.SetModel(p.Model);
+                    d.Commit();
+
+                    // 4. Associate the newly created individual to the desired person
+                    p.Diagnosis = d;
+                    repo.Update(p);
+
+                    return Ok("COVID-19 confirmed.");
+                }
+            }
+
+            return BadRequest();
         }
     }
 }

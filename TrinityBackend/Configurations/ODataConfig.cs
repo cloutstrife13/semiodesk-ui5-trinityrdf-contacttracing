@@ -40,7 +40,7 @@ namespace ContactTracingGraph.Configurations
         {
             entity.Collection
                 .Action("RetrieveDiagnosis")
-                .CollectionParameter<string>("ID");
+                .Parameter<string>("ID");
         }
     }
 }
