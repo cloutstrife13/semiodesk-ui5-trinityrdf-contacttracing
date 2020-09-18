@@ -1,0 +1,37 @@
+<mvc:View
+    xmlns:mvc="sap.ui.core.mvc"
+    xmlns="sap.m"
+    controllerName="semiodesk.ui5.covidtracker.controller.Tracker.Detail">
+	<Table id="idDiagnosisTable"
+		inset="false"
+		items="{User>/Diagnosis}">
+		<columns>
+			<Column
+				width="15em">
+				<Text text="ID" />
+			</Column>
+			<Column
+				width="15em"
+				demandPopin="true">
+				<Text text="Classification" />
+			</Column>			
+			<Column
+				minScreenWidth="Desktop"
+				demandPopin="true">
+				<Text text="Diagnosed on" />
+			</Column>
+		</columns>
+		<items>
+			<ColumnListItem>
+				<cells>
+					<ObjectIdentifier
+						title="{User>ID}"/>
+					<Text
+						text="{User>Classification}" />
+					<Text
+						text="{path:'User>DateDiagnosed', formatter:'.timestampToUtcString'}" />
+				</cells>
+			</ColumnListItem>
+		</items>
+	</Table>
+</mvc:View>

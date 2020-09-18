@@ -1,0 +1,9 @@
+<mvc:View
+   controllerName="semiodesk.contacttracing.controller.NotFound"
+   xmlns="sap.m"
+   xmlns:mvc="sap.ui.core.mvc">
+   <MessagePage
+      title="Not Found"
+      text="This page does not exist."
+      description="Please check the URL and try again."/>
+</mvc:View>

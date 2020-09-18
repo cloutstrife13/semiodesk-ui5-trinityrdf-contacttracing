@@ -1,0 +1,34 @@
+<mvc:View
+	controllerName="semiodesk.ui5.covidtracker.controller.App"
+	xmlns="sap.f"
+	xmlns:mvc="sap.ui.core.mvc"
+	xmlns:m="sap.m"
+	displayBlock="true"
+	height="100%">
+	<m:App>
+		<m:Page>
+			<m:customHeader>
+				<ShellBar
+					title="COVID-19 Tracker"
+					homeIcon="https://www.semiodesk.com/assets/img/semiodesk.svg"
+					secondTitle="powered by Trinity RDF">
+					<menu>
+						<m:Menu>
+							<m:MenuItem text="Trinity RDF" icon="https://www.semiodesk.com/assets/img/trinity-logo.svg" />
+							<m:MenuItem text="modom.io" icon="https://www.semiodesk.com/assets/img/modom-io-logo.svg" />
+						</m:Menu>
+					</menu>
+					<profile>
+						<Avatar initials="SD"/>
+					</profile>
+				</ShellBar>
+			</m:customHeader>
+			<FlexibleColumnLayout
+				autoFocus="false"
+				id="fcl"
+				stateChange=".onStateChanged"
+				backgroundDesign="Translucent"
+				layout="{/layout}"/>
+		</m:Page>
+	</m:App>
+</mvc:View>

@@ -1,0 +1,89 @@
+<mvc:View
+    xmlns="sap.uxap"
+    xmlns:m="sap.m"
+    xmlns:f="sap.f"
+	xmlns:layout="sap.ui.layout"
+    xmlns:mvc="sap.ui.core.mvc"
+    xmlns:core="sap.ui.core"
+	xmlns:diagnosis="semiodesk.ui5.covidtracker.view.Tracker.Blocks.Diagnosis"
+	xmlns:encounter="semiodesk.ui5.covidtracker.view.Tracker.Blocks.Encounter"
+    controllerName="semiodesk.ui5.covidtracker.controller.Tracker.Detail">
+    <ObjectPageLayout
+        id="ObjectPageLayout"
+		showTitleInHeaderContent="true"
+		alwaysShowContentHeader="false"
+		preserveHeaderStateOnScroll="false"
+		headerContentPinnable="true"
+		isChildPage="true"
+		upperCaseAnchorBar="false"
+		sectionChange="triggerSection">
+		<headerTitle>
+			<ObjectPageDynamicHeaderTitle>
+				<expandedHeading>
+					<m:Title text="User: {User>/ID}" wrapping="true" class="sapUiSmallMarginEnd"/>
+				</expandedHeading>
+
+				<snappedHeading>
+					<m:FlexBox fitContainer="true" alignItems="Center">
+						<f:Avatar src="../../../../../../../{products>ProductPicUrl}" class="sapUiTinyMarginEnd" />
+						<m:Title text="{User>/ID}" wrapping="true" />
+					</m:FlexBox>
+				</snappedHeading>
+
+				<navigationActions>
+					<m:OverflowToolbarButton type="Transparent" icon="sap-icon://full-screen" press="handleFullScreen" tooltip="Enter Full Screen Mode" visible="{= ${/actionButtonsInfo/midColumn/fullScreen} !== null }"/>
+					<m:OverflowToolbarButton type="Transparent" icon="sap-icon://exit-full-screen" press="handleExitFullScreen" tooltip="Exit Full Screen Mode" visible="{= ${/actionButtonsInfo/midColumn/exitFullScreen} !== null }"/>
+					<m:OverflowToolbarButton type="Transparent" icon="sap-icon://decline" press="handleClose"  tooltip="Close column" visible="{= ${/actionButtonsInfo/midColumn/closeColumn} !== null }"/>
+				</navigationActions>
+				<actions>
+					<m:Button
+						text="Submit Diagnosis"
+						type="Emphasized"
+						tooltip="Register the recently evaluated COVID Test to alert recently encountered people."
+						press=".onPressSubmit"/>
+				</actions>
+			</ObjectPageDynamicHeaderTitle>
+		</headerTitle>
+		<headerContent>
+		    <m:FlexBox wrap="Wrap" fitContainer="true">
+				<f:Avatar
+					src="../../../../../../../{products>ProductPicUrl}"
+					displaySize="L"
+					class="sapUiTinyMarginEnd"/>
+
+                <m:VBox class="sapUiLargeMarginEnd sapUiSmallMarginBottom">
+                    <m:Title text="COVID Health Status:" class="sapUiTinyMarginBottom"/>
+                    <m:ObjectStatus
+						text="{path:'User>/CovidHealthLevel', formatter:'.determineStatusTextByLevel'}"
+						state="{path:'User>/CovidHealthLevel', formatter:'.determineStatusStateByLevel'}"
+						class="sapMObjectStatusLarge"/>
+                </m:VBox>
+
+                <m:VBox class="sapUiLargeMarginEnd">
+                    <m:Title text="Most recent encounter in:" class="sapUiTinyMarginBottom"/>
+                    <m:ObjectStatus text="{User>/Encounter/0/Place/Name}" class="sapMObjectStatusLarge"/>
+                </m:VBox>
+			</m:FlexBox>
+		</headerContent>
+		<sections>
+			<ObjectPageSection id="diagnosisSection" title="Diagnosis">
+                <subSections>
+                    <ObjectPageSubSection id="diagnosisSubSection">
+                        <blocks>
+                            <diagnosis:Diagnosis id="diagnosisblock"/>
+                        </blocks>
+                    </ObjectPageSubSection>
+                </subSections>
+            </ObjectPageSection>
+			<ObjectPageSection id="encounterSection" title="Encounter">
+                <subSections>
+                    <ObjectPageSubSection id="encounterSubSection">
+                        <blocks>
+                            <encounter:Encounter id="encounterblock"/>
+                        </blocks>
+                    </ObjectPageSubSection>
+                </subSections>
+            </ObjectPageSection>
+		</sections>
+    </ObjectPageLayout>
+</mvc:View>
