@@ -32,8 +32,8 @@ sap.ui.define([
                 }
 			});
 		},
-		timestampToUtcString: function (sTimestamp) {
-			return new Date(sTimestamp).toUTCString();
+		parseTimestamp: function (sTimestamp) {
+			return new Date(sTimestamp).toLocaleString();
 		},
 		getUserCount: function(aUsers) {
 			return aUsers.length;

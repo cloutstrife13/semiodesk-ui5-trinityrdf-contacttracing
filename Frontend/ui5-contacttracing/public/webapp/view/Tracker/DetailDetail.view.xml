@@ -29,7 +29,7 @@
 				<layout:HorizontalLayout allowWrapping="true">
 					<layout:VerticalLayout class="sapUiMediumMarginEnd">
 						<ObjectAttribute title="Location" text="{Encounter>/Place/Name}"/>
-						<ObjectAttribute title="Time" text="{path:'Encounter>/DateEncountered', formatter:'.timestampToUtcString'}"/>
+						<ObjectAttribute title="Time" text="{path:'Encounter>/DateEncountered', formatter:'.parseTimestamp'}"/>
 					</layout:VerticalLayout>
 
 					<layout:VerticalLayout>

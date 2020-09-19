@@ -7,10 +7,29 @@ sap.ui.define([
 		onInit: function () {
 			this.oRouter = this.getRouter();
 
+			this.setCovidFilter();
+			this.retrieveUsers();
+		},
+		setCovidFilter: function () {
+			this.setModel({
+				oModel: [
+					{"ID": 0, "RiskLevel": "All"},
+					{"ID": 1, "RiskLevel": "No risk"},
+					{"ID": 2, "RiskLevel": "Potential risk"},
+					{"ID": 3, "RiskLevel": "Infected"}
+				],
+				sModelAlias: "CovidFilter"
+			});
+		},
+		retrieveUsers: function(oODataQuery = {}) {
 			this.read({
 				sEntityType: "Person",
-				sModelAlias: "Users"
+				sModelAlias: "Users",
+				oODataQuery: oODataQuery
 			});
+		},
+		onFilterSelectionChange: function (iLevel) {
+			this.retrieveUsers((iLevel > 0) ? {"$filter": `CovidHealthLevel eq ${iLevel}`} : {});
 		},
 		onListItemPress: function (oEvent) {
 			let oNextUIState = this.getNextPage(1),

@@ -4,6 +4,7 @@
 	height="100%"
 	xmlns="sap.m"
 	xmlns:f="sap.f"
+	xmlns:core="sap.ui.core"
 	xmlns:layout="sap.ui.layout"
 	xmlns:mvc="sap.ui.core.mvc">
 	<f:DynamicPage id="dynamicPageId"
@@ -21,13 +22,15 @@
 				<layout:HorizontalLayout allowWrapping="true">
 					<layout:VerticalLayout class="sapUiMediumMarginEnd">
 						<ObjectAttribute title="COVID Risk Filter" text=""/>
-						<!-- <ComboBox
+						<ComboBox
 							items="{
-								path: '/CountriesCollection',
-								sorter: { path: 'text' }
-							}">
-							<core:Item key="{key}" text="{text}" />
-						</ComboBox> -->
+								path: 'CovidFilter>/',
+								sorter: { path: 'ID' }
+							}"
+							selectedKey="0"
+							selectionChange=".onFilterSelectionChange(${$source>/selectedKey})">
+							<core:Item key="{CovidFilter>ID}" text="{CovidFilter>RiskLevel}" />
+						</ComboBox>
 					</layout:VerticalLayout>
 				</layout:HorizontalLayout>
 			</f:DynamicPageHeader>

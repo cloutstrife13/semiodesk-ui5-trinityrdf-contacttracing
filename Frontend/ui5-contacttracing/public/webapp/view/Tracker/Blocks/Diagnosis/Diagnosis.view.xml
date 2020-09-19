@@ -29,7 +29,7 @@
 					<Text
 						text="{User>Classification}" />
 					<Text
-						text="{path:'User>DateDiagnosed', formatter:'.timestampToUtcString'}" />
+						text="{path:'User>DateDiagnosed', formatter:'.parseTimestamp'}" />
 				</cells>
 			</ColumnListItem>
 		</items>

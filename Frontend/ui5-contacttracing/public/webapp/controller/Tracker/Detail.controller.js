@@ -84,8 +84,8 @@ sap.ui.define([
 				"3": "Error"
 			}[iLevel];
 		},
-		timestampToUtcString: function (sTimestamp) {
-			return new Date(sTimestamp).toUTCString();
+		parseTimestamp: function (sTimestamp) {
+			return new Date(sTimestamp).toLocaleString();
 		}
 	});
 }, true);

@@ -29,7 +29,7 @@
 					<Text
 						text="{User>Place/Name}" />
 					<Text
-						text="{path:'User>DateEncountered', formatter:'.timestampToUtcString'}" />
+						text="{path:'User>DateEncountered', formatter:'.parseTimestamp'}" />
 				</cells>
 			</ColumnListItem>
 		</items>

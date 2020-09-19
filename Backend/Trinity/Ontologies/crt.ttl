@@ -159,7 +159,7 @@ crt:EKGFKJ <http://schema.org/description> "Fictional code generated on https://
     <http://www.w3.org/2000/01/rdf-schema#label> "EKGFKJ".
 crt:ENC_DEBER <http://schema.org/description> "Encounter in Berlin (10 people)"@en;
     <http://schema.org/name> "ENC-DEBER"@en;
-    crt:dateEncountered "2020-09-23T00:00:00.000Z";
+    crt:dateEncountered "2020-09-23T00:00:00.000Z"^^<http://www.w3.org/2001/XMLSchema#dateTime>;
     crt:person crt:PVTCUS, crt:ZNSUGM, crt:SQQTAZ, crt:QCASYA, crt:RATJEP, crt:ZXRTUW, crt:VJUAKW, crt:KLEDMH, crt:FXVJXS, crt:ZYAGCY;
     crt:place crt:DEBER;
     a crt:Encounter;
@@ -167,7 +167,7 @@ crt:ENC_DEBER <http://schema.org/description> "Encounter in Berlin (10 people)"@
     <http://www.w3.org/2000/01/rdf-schema#label> "ENC_DEBER".
 crt:ENC_DECGN <http://schema.org/description> "Encounter in Cologne (3 people)"@en;
     <http://schema.org/name> "ENC-DECGN"@en;
-    crt:dateEncountered "2020-09-23T00:00:00.000Z";
+    crt:dateEncountered "2020-09-23T00:00:00.000Z"^^<http://www.w3.org/2001/XMLSchema#dateTime>;
     crt:person crt:DSPHLW, crt:WHCWPA, crt:JCBVVF;
     crt:place crt:DECGN;
     a crt:Encounter;
@@ -175,7 +175,7 @@ crt:ENC_DECGN <http://schema.org/description> "Encounter in Cologne (3 people)"@
     <http://www.w3.org/2000/01/rdf-schema#label> "ENC_DECGN".
 crt:ENC_DEMUC <http://schema.org/description> "Encounter in Munich (7 people)"@en;
     <http://schema.org/name> "ENC-DEMUC"@en;
-    crt:dateEncountered "2020-09-23T00:00:00.000Z";
+    crt:dateEncountered "2020-09-23T00:00:00.000Z"^^<http://www.w3.org/2001/XMLSchema#dateTime>;
     crt:person crt:BPZJGG, crt:CLCDJG, crt:DTRKNE, crt:EKGFKJ, crt:SXJMXE, crt:UYPCAT, crt:LUZULZ;
     crt:place crt:DEMUC;
     a crt:Encounter;
@@ -183,7 +183,7 @@ crt:ENC_DEMUC <http://schema.org/description> "Encounter in Munich (7 people)"@e
     <http://www.w3.org/2000/01/rdf-schema#label> "ENC_DEMUC".
 crt:ENC_ENLDN <http://schema.org/description> "Encounter in London (9 people)"@en;
     <http://schema.org/name> "ENC-ENLDN"@en;
-    crt:dateEncountered "2020-09-23T00:00:00.000Z";
+    crt:dateEncountered "2020-09-23T00:00:00.000Z"^^<http://www.w3.org/2001/XMLSchema#dateTime>;
     crt:person crt:CDPVQF, crt:DUWDWN, crt:EAFMKE, crt:QMTWAE, crt:ULKQUF, crt:VTGSHK, crt:XNMZNP, crt:MMGPDN, crt:RNTQED;
     crt:place crt:ENLDN;
     a crt:Encounter;
@@ -191,7 +191,7 @@ crt:ENC_ENLDN <http://schema.org/description> "Encounter in London (9 people)"@e
     <http://www.w3.org/2000/01/rdf-schema#label> "ENC_ENLDN".
 crt:ENC_ESBCN <http://schema.org/description> "Encounter in Barcelona (8 people)"@en;
     <http://schema.org/name> "ENC-ESBCN"@en;
-    crt:dateEncountered "2020-09-23T00:00:00.000Z";
+    crt:dateEncountered "2020-09-23T00:00:00.000Z"^^<http://www.w3.org/2001/XMLSchema#dateTime>;
     crt:person crt:WUJVBR, crt:PGADMP, crt:XPHVZD, crt:XWDBGX, crt:NSTEBX, crt:GWAXBD, crt:KHMFHS, crt:GAXCXS;
     crt:place crt:ESBCN;
     a crt:Encounter;
@@ -199,7 +199,7 @@ crt:ENC_ESBCN <http://schema.org/description> "Encounter in Barcelona (8 people)
     <http://www.w3.org/2000/01/rdf-schema#label> "ENC_ESBCN".
 crt:ENC_FRPAR <http://schema.org/description> "Encounter in Paris (13 people)"@en;
     <http://schema.org/name> "ENC-FRPAR"@en;
-    crt:dateEncountered "2020-09-23T00:00:00.000Z";
+    crt:dateEncountered "2020-09-23T00:00:00.000Z"^^<http://www.w3.org/2001/XMLSchema#dateTime>;
     crt:person crt:BFLBQX, crt:BQKPSX, crt:CKQSYV, crt:CKXBAN, crt:YJZTNH, crt:TXMXJP, crt:NDBXCL, crt:QCCLHW, crt:HHGTCF, crt:NABKZM, crt:HZFLJF, crt:STRVYT, crt:WFZDWR;
     crt:place crt:FRPAR;
     a crt:Encounter;

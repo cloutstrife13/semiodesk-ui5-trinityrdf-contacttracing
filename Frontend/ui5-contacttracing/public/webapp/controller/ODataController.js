@@ -18,7 +18,10 @@ sap.ui.define([
 
             // Resolve request
             pRequest.then((oData) => {
-                this.setModel(oData, oParams.sModelAlias);
+                this.setModel({
+                    oModel: oData,
+                    sModelAlias: oParams.sModelAlias
+                });
             });
         },
         
@@ -56,9 +59,11 @@ sap.ui.define([
             return (oModel != undefined) ? JSON.parse(oModel.getJSON()) : null;
         },
     
-        setModel: function (oModel, sName) {
-            if(oModel != null) oModel = new JSONModel(oModel);
-            this.getBaseView().setModel(oModel, sName);
+        setModel: function (oParams = {oModel, sModelAlias}) {
+            if(oParams.oModel != null)
+                oParams.oModel = new JSONModel(oParams.oModel);
+                
+            this.getBaseView().setModel(oParams.oModel, oParams.sModelAlias);
         }
     });   
 });
