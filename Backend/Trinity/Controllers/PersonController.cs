@@ -7,6 +7,7 @@ using Microsoft.AspNetCore.Mvc;
 using System;
 using ContactTracingGraph.Queries;
 using System.Collections.Generic;
+using System.Linq;
 
 namespace ContactTracingGraph.Controllers
 {
@@ -15,7 +16,6 @@ namespace ContactTracingGraph.Controllers
     {
         private readonly TrinityRepository<Person> repo;
         private readonly SparqlQueryManager sqm;
-
 
         public PersonController(DbContext trinity)
         {
@@ -33,7 +33,7 @@ namespace ContactTracingGraph.Controllers
         public IActionResult Get(string key)
         {
             List<Person> r = repo.Read(sqm.GetPersonByIdQuery(key));
-            return (r.Count < 1) ? (IActionResult) NotFound() : Ok(r[0]);
+            return (r.Count < 1) ? (IActionResult) NotFound() : Ok(r.First());
         }
 
         public IActionResult Post([FromBody]dynamic Obj)
@@ -61,12 +61,12 @@ namespace ContactTracingGraph.Controllers
 
             if (ID.Length > 0)
             {
-                Person p = repo.Read().Find(p => p.ID == ID);
+                Person p = repo.Read(ID);
 
                 if (p != null)
                 {
                     // 1. Record current time
-                    var timeStampNow = DateTime.Now;
+                    DateTime timeStampNow = DateTime.Now;
 
                     // 2. Instantiate new Diagnosis
                     InfectiousDisease d = new InfectiousDisease($"COVID19_{timeStampNow.ToString("HHmmssddMMyyyy")}");
@@ -76,16 +76,49 @@ namespace ContactTracingGraph.Controllers
                     // 3. Bind the newly created individual to the database
                     d.SetModel(p.Model);
                     d.Commit();
-
+                    
                     // 4. Associate the newly created individual to the desired person
                     p.Diagnosis.Add(d);
                     repo.Update(p);
 
-                    return Ok("COVID-19 confirmed.");
+                    return Ok(d);
                 }
             }
 
             return BadRequest();
         }
+
+        [HttpPost, ODataRoute("RecordEncounter")]
+        public IActionResult RecordEncounter(ODataActionParameters parameter)
+        {
+            string locationId = parameter["LocationId"].ToString();
+            List<string> userIds = (parameter["UserIds"] as IEnumerable<string>).ToList();
+
+            if(userIds.Count > 0)
+            {
+                // 1. Instantiate Encounter and Location
+                DateTime timeStampNow = DateTime.Now;
+                Encounter e = new Encounter($"ENC_{timeStampNow.ToString("HHmmssddMMyyyy")}");
+
+                // 2. Bind the Encounter instance to the relevant properties
+                e.Place = repo.Read<Place>(locationId);
+                e.DateEncountered = timeStampNow;
+                e.Person = repo.Read<Person>().Where(p => userIds.Contains(p.ID)).ToList();
+
+                // 3. Bind the newly created Encounter instance to the database
+                e.SetModel(e.Person.First().Model);
+                e.Commit();
+
+                // 4. Associate the people to the new Encounter instance
+                e.Person.ForEach(p => {
+                    p.Encounter.Add(e);
+                    repo.Update(p);
+                });
+
+                return Ok(e);
+            }
+
+            return BadRequest();
+        }   
     }
 }

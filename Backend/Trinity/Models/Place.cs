@@ -9,9 +9,11 @@ namespace ContactTracingGraph.Models
     public class Place : ODataResource
     {
         [JsonConstructor]
-        public Place(string ID) : base(ID, CRT.Place) { }
+        public Place(string ID) : base(ID, CRT.Place) {}
 
-        public Place(Uri uri) : base(uri) { }
+        public Place() : base(CRT.Place) {}
+
+        public Place(Uri uri) : base(uri) {}
 
         [RdfProperty(CRT.name)]
         public string Name { get; set; }

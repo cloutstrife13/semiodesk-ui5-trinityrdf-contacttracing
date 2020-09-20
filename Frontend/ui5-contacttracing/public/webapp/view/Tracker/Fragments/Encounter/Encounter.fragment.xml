@@ -1,0 +1,66 @@
+<core:FragmentDefinition
+	xmlns="sap.m"
+	xmlns:core="sap.ui.core">
+	<Popover
+		id="encounterPopover"
+		showHeader="false"
+		contentWidth="320px"
+		contentHeight="500px"
+		placement="Bottom"
+		ariaLabelledBy="master-title"
+		beforeOpen=".loadFragmentData"
+		afterOpen=".setEncounterData"
+		afterClose=".onPopoverExit">
+		<NavContainer
+			id="navCon">
+			<Page
+				id="master"
+				class="sapUiResponsivePadding--header"
+				title="Record Encounter">
+                <subHeader>
+                    <OverflowToolbar>
+                        <SearchField
+                            placeholder="Search Person"
+                            liveChange=".onSearch"
+                            width="100%" />
+                    </OverflowToolbar>
+                </subHeader>
+				<List
+					id="createEncounter"
+					items="{
+						path: 'Users>/',
+						sorter: { path: 'ID' }
+					}"
+					selectionChange=".onUsersSelectionChange"
+                    mode="MultiSelect"
+					includeItemInSelection="true">
+					<infoToolbar>
+						<OverflowToolbar visible="false" id="idInfoToolbar">
+							<Label id="idFilterLabel" />
+						</OverflowToolbar>
+					</infoToolbar>
+					<StandardListItem title="{Users>ID}"/>
+				</List>
+			</Page>
+		</NavContainer>
+        <footer>
+			<OverflowToolbar>
+                <ComboBox
+                    placeholder="Select Location"
+                    items="{
+				    	path: 'Locations>/',
+						sorter: { path: 'ID' }
+					}"
+					selectionChange=".onLocationSelectionChange(${$source>/selectedKey})">
+					<core:Item key="{Locations>ID}" text="{Locations>Name}" />
+				</ComboBox>
+				<ToolbarSpacer/>
+				<Button
+					id="encounter"
+					text="Submit"
+					enabled="{NewEncounter>/bIsValid}"
+					press=".onPressSubmitEncounter" />
+			</OverflowToolbar>
+		</footer>
+	</Popover>
+</core:FragmentDefinition>

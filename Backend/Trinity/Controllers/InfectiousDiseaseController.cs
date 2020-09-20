@@ -42,7 +42,6 @@ namespace ContactTracingGraph.Controllers
             Obj.ID = key;
             Obj = repo.Update(Obj.ToObject<InfectiousDisease>());
             return (Obj is null) ? NotFound() : Ok(Obj);
-
         }
 
         public IActionResult Delete([FromODataUri] string key)

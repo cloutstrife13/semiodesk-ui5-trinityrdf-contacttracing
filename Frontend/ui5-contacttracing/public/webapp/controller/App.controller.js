@@ -1,10 +1,10 @@
 sap.ui.define([
-	"./ODataController",
+	"./FactoryController",
 	"sap/ui/core/routing/History"
-], function (ODataController, History) {
+], function (FactoryController, History) {
 	"use strict";
 
-	return ODataController.extend("semiodesk.ui5.covidtracker.controller.App", {
+	return FactoryController.extend("semiodesk.ui5.covidtracker.controller.App", {
 		onInit: function () {
 			this.oRouter = this.getOwnerComponent().getRouter();
 			this.oRouter.attachRouteMatched(this.onRouteMatched, this);

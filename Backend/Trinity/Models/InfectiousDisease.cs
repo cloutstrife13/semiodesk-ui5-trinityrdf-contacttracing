@@ -11,7 +11,9 @@ namespace ContactTracingGraph.Models
         [JsonConstructor]
         public InfectiousDisease(string ID) : base(ID, CRT.InfectiousDisease) {}
 
-        public InfectiousDisease(Uri uri) : base(uri) { }
+        public InfectiousDisease() : base(CRT.InfectiousDisease) {}
+
+        public InfectiousDisease(Uri uri) : base(uri) {}
 
         [RdfProperty(CRT.classification)]
         public string Classification { get; set; }

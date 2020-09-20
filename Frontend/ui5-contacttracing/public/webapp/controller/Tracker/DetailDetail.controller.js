@@ -1,9 +1,9 @@
 sap.ui.define([
-    "../ODataController"
-], (ODataController) => {
+    "../FactoryController"
+], (FactoryController) => {
 	"use strict";
 
-	return ODataController.extend("semiodesk.ui5.covidtracker.controller.Tracker.DetailDetail", {
+	return FactoryController.extend("semiodesk.ui5.covidtracker.controller.Tracker.DetailDetail", {
 		onInit: function () {
             this.oRouter = this.getRouter();
 			this.oRouter.getRoute("Encounter").attachPatternMatched(this._onInstanceMatched, this);
@@ -24,19 +24,25 @@ sap.ui.define([
             this._user = oEvent.getParameter("arguments").user || this._user || "0"
             this._encounter = oEvent.getParameter("arguments").encounter || this._encounter || "0";
 
-            this.read({
-                sEntityType: `Encounter('${this._encounter}')`,
-                sModelAlias: "Encounter",
-                oODataQuery: {
-                    "$expand": "Person,Place"
-                }
+			this.setViewModelFetchConfiguration({
+				sViewName: "DetailDetail",
+				oQuery: {
+					sEntityType: `Encounter('${this._encounter}')`,
+					sModelAlias: "Encounter",
+					oODataQuery: {
+						$expand: "Person,Place"
+					}
+				}
 			});
+
+			this.getViewModel("DetailDetail");
 		},
-		parseTimestamp: function (sTimestamp) {
-			return new Date(sTimestamp).toLocaleString();
+		determineRiskTextByLevel: function (iLevel) {
+			return {
+				"1": "No risk",
+				"2": "Low risk",
+				"3": "High risk"
+			}[iLevel];
 		},
-		getUserCount: function(aUsers) {
-			return aUsers.length;
-		}
     });
 }, true);

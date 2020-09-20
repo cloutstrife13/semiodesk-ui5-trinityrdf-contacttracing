@@ -1,6 +1,6 @@
-sap.ui.define(["./ODataController"], function (ODataController) {
+sap.ui.define(["./FactoryController"], function (FactoryController) {
     "use strict";
-    return ODataController.extend("semiodesk.contacttracing.controller.NotFound", {
+    return FactoryController.extend("semiodesk.contacttracing.controller.NotFound", {
        onInit: function () {
        }
     });

@@ -1,10 +1,13 @@
 sap.ui.define([
-	"../ODataController",
-	"sap/m/MessageToast"
-], (ODataController, MessageToast) => {
+	"../FactoryController",
+	"sap/m/MessageToast",
+	"sap/ui/core/Fragment",
+	"sap/ui/model/Filter",
+	"sap/ui/model/FilterOperator"
+], (FactoryController, MessageToast, Fragment, Filter, FilterOperator) => {
 	"use strict";
 
-	return ODataController.extend("semiodesk.ui5.covidtracker.controller.Tracker.Detail", {
+	return FactoryController.extend("semiodesk.ui5.covidtracker.controller.Tracker.Detail", {
 		onInit: function () {
 			this.oRouter = this.getRouter();
 			this.oRouter.getRoute("Users").attachPatternMatched(this._onInstanceMatched, this);
@@ -25,16 +28,19 @@ sap.ui.define([
 		},
 		_onInstanceMatched: function (oEvent) {
 			this._user = oEvent.getParameter("arguments").user || this._user || "0";
-			this.getUser();
-		},
-		getUser: function () {
-			this.read({
-				sEntityType: `Person('${this._user}')`,
-				sModelAlias: "User",
-				oODataQuery: {
-					"$expand": "Encounter($expand=Place),Diagnosis",
+			
+			this.setViewModelFetchConfiguration({
+				sViewName: "Detail",
+				oQuery: {
+					sEntityType: `Person('${this._user}')`,
+					sModelAlias: "User",
+					oODataQuery: {
+						$expand: "Encounter($expand=Place;$orderBy=DateEncountered desc),Diagnosis($orderBy=DateDiagnosed desc)",
+					}
 				}
 			});
+
+			this.getViewModel("Detail");
 		},
 		onCallingNextPage: function (oEvent) {
 			let sModelAlias = "User",
@@ -46,46 +52,132 @@ sap.ui.define([
 
 			this.oRouter.navTo("Encounter", {layout: oNextUIState.layout, user: sUserId, encounter: sEncounterId});
 		},
-		onPressSubmit: function () {
+		onPressSubmitDiagnosis: function () {
+			this.fireODataAction({
+				oPayload: {ID: this._user},
+				sODataAction: "SubmitDiagnosis",
+				sFeedback: `User ${this._user} has been diagnosed with COVID-19.`
+			});
+		},
+		onPressSubmitEncounter: function() {
+			let oModel = this.getModel("NewEncounter");
+
+			this.fireODataAction({
+				oPayload: {
+					LocationId: oModel["sLocation"],
+					UserIds: oModel["aUsers"].concat([this._user])
+				},
+				sODataAction: "RecordEncounter",
+				sFeedback: "A new Encounter has been recorded."
+			});
+
+			Fragment.byId("popoverNavCon", "encounterPopover")
+					.destroy(true);
+		},
+		fireODataAction: function(oParams = {oPayload, sODataAction, sFeedback}) {
 			let oCallback = () => {
-				MessageToast.show(`User ${this._user} has been diagnosed with COVID-19.`);
-
-				let pChain = new Promise((resolve) => {
-					this.read({
-						sEntityType: "Person",
-						sModelAlias: "Users"
-					});
-
-					resolve();
-				});
-				
-				pChain.then(() => this.getUser());
+				MessageToast.show(oParams.sFeedback);
+				this.refreshViewModel();
 			};
+
+			console.log(oParams);
 
 			this.create({
 				sEntityType: `Person`,
 				sModelAlias: "User",
-				oPayload: {"ID": this._user},
+				oPayload: oParams.oPayload,
 				oCallback: oCallback,
-				sODataAction: "SubmitDiagnosis"
+				sODataAction: oParams.sODataAction
 			});
 		},
-		determineStatusTextByLevel: function (iLevel) {
-			return {
-				"1": "No risk",
-				"2": "Potential risk",
-				"3": "Infected"
-			}[iLevel];
+		getEncounterFilter: function() {
+			return new Filter("ID", "NE", this._user);
 		},
-		determineStatusStateByLevel: function (iLevel) {
-			return {
-				"1": "Success",
-				"2": "Warning",
-				"3": "Error"
-			}[iLevel];
+		loadFragmentData: function() {
+			this.read({
+				sEntityType: "Place",
+				sModelAlias: "Locations",
+			});
+
+			Fragment.byId("popoverNavCon", "createEncounter")
+					.getBinding("items")
+					.filter([this.getEncounterFilter()]);
 		},
-		parseTimestamp: function (sTimestamp) {
-			return new Date(sTimestamp).toLocaleString();
+		setEncounterData: function() {
+			this.setModel({
+				oModel: {
+					aUsers: new Array(),
+					sLocation: "",
+					bIsValid: false
+				},
+				sModelAlias: "NewEncounter"
+			});
+		},
+		onOpenPopover: function (oEvent) {		
+			let oButton = oEvent.getSource();
+
+			Fragment.load({
+				id: "popoverNavCon",
+				name: "semiodesk.ui5.covidtracker.view.Tracker.Fragments.Encounter.Encounter",
+				controller: this
+			}).then(function(oPopover){
+				this._oPopover = oPopover;
+				this.getView().addDependent(this._oPopover);
+				this._oPopover.openBy(oButton);
+			}.bind(this));
+		},
+		onSearch: function (oEvent) {
+			Fragment.byId("popoverNavCon", "createEncounter")
+					.getBinding("items")
+					.filter([new Filter({
+						filters: [
+							this.getEncounterFilter(),
+							new Filter("ID", FilterOperator.Contains, oEvent.getSource().getValue())
+						],
+						and: true
+					})]);
+		},
+		onUsersSelectionChange: function (oEvent) {
+			let oList = oEvent.getSource(),
+				oLabel = Fragment.byId("popoverNavCon", "idFilterLabel"),
+				oInfoToolbar = Fragment.byId("popoverNavCon", "idInfoToolbar"),
+				oModel = this.getModel("NewEncounter");
+
+			// With the 'getSelectedContexts' function you can access the context paths
+			// of all list items that have been selected, regardless of any current
+			// filter on the aggregation binding.
+			let aContexts = oList.getSelectedContexts(true);
+			
+			// Retrieve and save every selected ID
+			oModel["aUsers"] = aContexts.map(oElement => oElement.getProperty("ID"));
+			oModel["bIsValid"] = (oModel["aUsers"].length > 0 && oModel["sLocation"].length > 0);
+
+			this.setModel({
+				oModel: oModel,
+				sModelAlias: "NewEncounter"
+			});
+			
+			// update UI
+			let bSelected = (aContexts && aContexts.length > 0),
+				sText = (bSelected) ? aContexts.length + " selected" : null;
+			
+			oInfoToolbar.setVisible(bSelected);
+			oLabel.setText(sText);
+		},
+		onLocationSelectionChange: function(sLocation) {
+			let oModel = this.getModel("NewEncounter");
+			
+			oModel["sLocation"] = sLocation;
+			oModel["bIsValid"] = (oModel["aUsers"].length > 0 && oModel["sLocation"].length > 0);
+			
+			this.setModel({
+				oModel: oModel,
+				sModelAlias: "NewEncounter"
+			});
+		},
+		onPopoverExit: function(oEvent) {
+			console.log(oEvent.getSource());
+			oEvent.getSource().destroy(true);
 		}
 	});
 }, true);

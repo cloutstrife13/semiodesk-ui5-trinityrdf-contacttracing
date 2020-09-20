@@ -40,7 +40,12 @@
 						text="Submit Diagnosis"
 						type="Emphasized"
 						tooltip="Register the recently evaluated COVID Test to alert recently encountered people."
-						press=".onPressSubmit"/>
+						press=".onPressSubmitDiagnosis"/>
+					<m:Button
+						text="Record Encounter"
+						type="Emphasized"
+						tooltip="Register the most recent encounter via Exposure Logging."
+						press=".onOpenPopover"/>
 				</actions>
 			</ObjectPageDynamicHeaderTitle>
 		</headerTitle>

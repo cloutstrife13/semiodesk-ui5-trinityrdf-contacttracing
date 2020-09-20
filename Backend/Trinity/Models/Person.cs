@@ -10,9 +10,11 @@ namespace ContactTracingGraph.Models
     public class Person : ODataResource
     {
         [JsonConstructor]
-        public Person(string ID) : base(ID, CRT.Person) { }
+        public Person(string ID) : base(ID, CRT.Person) {}
 
-        public Person(Uri uri) : base(uri) { }
+        public Person() : base(CRT.Person) {}
+
+        public Person(Uri uri) : base(uri) {}
 
         [RdfProperty(CRT.covidHealthLevel)]
         public int CovidHealthLevel { get; set; }

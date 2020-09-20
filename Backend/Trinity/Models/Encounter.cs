@@ -10,9 +10,11 @@ namespace ContactTracingGraph.Models
     public class Encounter : ODataResource
     {
         [JsonConstructor]
-        public Encounter(string ID) : base(ID, CRT.Encounter) { }
+        public Encounter(string ID) : base(ID, CRT.Encounter) {}
 
-        public Encounter(Uri uri) : base(uri) { }
+        public Encounter() : base(CRT.Encounter) {}
+
+        public Encounter(Uri uri) : base(uri) {}
 
         [RdfProperty(CRT.person)]
         public List<Person> Person { get; set; }
@@ -23,5 +25,6 @@ namespace ContactTracingGraph.Models
         [RdfProperty(CRT.dateEncountered)]
         public DateTime DateEncountered { get; set; }
 
+        public int CovidRiskLevel { get; set; }
     }
 }

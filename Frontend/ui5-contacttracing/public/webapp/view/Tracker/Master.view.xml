@@ -21,6 +21,13 @@
 			<f:DynamicPageHeader pinnable="false">
 				<layout:HorizontalLayout allowWrapping="true">
 					<layout:VerticalLayout class="sapUiMediumMarginEnd">
+						<ObjectAttribute title="Search Person" text=""/>
+						<SearchField
+							placeholder="Enter User ID"
+							liveChange=".onSearch"
+							width="100%" />
+					</layout:VerticalLayout>
+					<layout:VerticalLayout class="sapUiMediumMarginEnd">
 						<ObjectAttribute title="COVID Risk Filter" text=""/>
 						<ComboBox
 							items="{
@@ -36,7 +43,7 @@
 			</f:DynamicPageHeader>
 		</f:header>
 		<f:content>
-			<Table id="productsTable"
+			<Table id="userTable"
 				   inset="false"
 				   items="{
                        path: 'Users>/',
@@ -46,21 +53,11 @@
                     }"
 				   class="sapFDynamicPageAlignContent"
 				   width="auto">
-				<!-- <headerToolbar>
-					<OverflowToolbar>
-						<ToolbarSpacer/>
-						<SearchField search="onSearch" width="17.5rem"/>
-						<OverflowToolbarButton icon="sap-icon://add" type="Transparent"/>
-						<OverflowToolbarButton icon="sap-icon://sort" type="Transparent"/>
-					</OverflowToolbar>
-				</headerToolbar> -->
 				<columns>
-					<Column width="20em">
+					<Column>
 						<Text text="User ID" />
 					</Column>
-					<Column
-						minScreenWidth="Desktop"
-						demandPopin="true">
+					<Column>
 						<Text text="COVID Health Status" />
 					</Column>
 				</columns>

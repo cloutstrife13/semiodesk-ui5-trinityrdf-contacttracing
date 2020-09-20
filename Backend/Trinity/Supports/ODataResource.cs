@@ -10,6 +10,8 @@ namespace ContactTracingGraph.Supports
 
         public ODataResource(string id, string classUri) : base(GenerateID(id, classUri)) { }
 
+        public ODataResource(string classUri) : base(GenerateID(null, classUri)) { }
+
         [Key]
         public string ID { 
             get => Uri.Fragment.Substring(1);

@@ -39,9 +39,14 @@ namespace ContactTracingGraph.Configurations
 
         private static void ActivateODataMethods<T>(EntityTypeConfiguration<T> entity) where T : ODataResource
         {
-            entity.Collection
-                .Action("SubmitDiagnosis")
-                .Parameter<string>("ID");
+            var aSubmitDiagnosis = entity.Collection.Action("SubmitDiagnosis");
+            aSubmitDiagnosis.Parameter<string>("ID");
+            aSubmitDiagnosis.ReturnsFromEntitySet<InfectiousDisease>("InfectiousDisease");
+
+            var aReportEncounter = entity.Collection.Action("RecordEncounter");
+            aReportEncounter.CollectionParameter<string>("UserIds");
+            aReportEncounter.Parameter<string>("LocationId");
+            aReportEncounter.ReturnsFromEntitySet<Encounter>("Encounter");
         }
     }
 }

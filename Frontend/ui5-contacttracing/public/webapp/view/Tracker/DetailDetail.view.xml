@@ -34,7 +34,10 @@
 
 					<layout:VerticalLayout>
 						<ObjectAttribute title="Severity"/>
-						<ObjectStatus text="No Risk" state="Success" />
+						<ObjectStatus
+							text="{path:'Encounter>/CovidRiskLevel', formatter:'.determineRiskTextByLevel'}"
+							state="{path:'Encounter>/CovidRiskLevel', formatter:'.determineStatusStateByLevel'}"
+						/>
 					</layout:VerticalLayout>
 				</layout:HorizontalLayout>
 			</f:DynamicPageHeader>
@@ -51,14 +54,21 @@
 					</Toolbar>
 				</headerToolbar>
 				<columns>
-					<Column width="20em">
+					<Column >
 						<Text text="User ID" />
+					</Column>
+					<Column>
+						<Text text="COVID Health Status" />
 					</Column>
 				</columns>
 				<items>
 					<ColumnListItem>
 						<cells>
 							<ObjectIdentifier title="{Encounter>ID}" />
+							<ObjectStatus
+								text="{path:'Encounter>CovidHealthLevel', formatter:'.determineStatusTextByLevel'}"
+								state="{path:'Encounter>CovidHealthLevel', formatter:'.determineStatusStateByLevel'}"
+							/>
 						</cells>
 					</ColumnListItem>
 				</items>
