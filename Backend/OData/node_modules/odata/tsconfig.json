@@ -1,0 +1,19 @@
+{
+  "compilerOptions": {
+    "sourceMap": true,
+    "module": "ESNext",
+    "esModuleInterop": true,
+    "experimentalDecorators": true,
+    "target": "es5",
+    "outDir": "dist",
+    "lib": ["dom", "es2015"],
+    "importHelpers": true,
+    "moduleResolution": "node",
+    "types": ["node", "jest"],
+    "declaration": true,
+    "declarationDir": "dist/types"
+  },
+  "include": ["src"],
+  "exclude": ["**/*.spec.ts"],
+  "compileOnSave": false
+}
