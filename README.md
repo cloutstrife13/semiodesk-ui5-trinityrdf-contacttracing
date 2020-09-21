@@ -11,7 +11,7 @@ This **COVID-19 RDF Tracker** application simulates such use case based on a **S
  - OpenLink Virtuoso
  
 ## Deployment
-To deploy the app, it is important that OpenLink Virtuoso is installed and running on your PC or Docker as the backend is dependent on it. Once that has been considered, the application can be launched with the provided batch file for initializing the OData V4 Client microservice, the Linked Data Server and the OpenUI5 frontend. Trinity RDF ensures that the provided dataset is automatically uploaded to OpenLink Virtuoso upon its initialization. That means that you don't need to worry about making any post-installation configurations for OpenLink Virtuoso.
+To deploy the app, it is important that OpenLink Virtuoso is installed and running on your PC or Docker as the backend is dependent on it. Attached to this repository are several batch files for installing the relevant dependencies. Once that has been considered, the application can be launched with the provided **'Run App.bat'** file for initializing the OData V4 Client microservice, the Linked Data Server and the OpenUI5 frontend simultaneously. Trinity RDF ensures that the provided dataset is automatically uploaded to OpenLink Virtuoso upon its initialization. That means that you don't need to worry about making any post-installation configurations for OpenLink Virtuoso.
 
 ## Using the App
 Once the application is deployed, the frontend service can be accessed via http://localhost:3000/. After accessing it, a list of fictional users will appear whose *COVID Health Status* are displayed as *No risk*.
