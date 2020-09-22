@@ -6,7 +6,6 @@ using Microsoft.AspNet.OData.Routing;
 using Microsoft.AspNetCore.Mvc;
 using System;
 using System.Collections.Generic;
-using ContactTracingGraph.Queries;
 using System.Linq;
 
 namespace ContactTracingGraph.Controllers
@@ -15,11 +14,9 @@ namespace ContactTracingGraph.Controllers
     public class EncounterController : ODataController
     {
         private readonly TrinityRepository<Encounter> repo;
-        private readonly SparqlQueryManager sqm;
 
         public EncounterController(DbContext trinity) {
             repo = new TrinityRepository<Encounter>(trinity.DefaultModel);
-            sqm = new SparqlQueryManager();
         }
 
         [EnableQuery]
@@ -31,7 +28,7 @@ namespace ContactTracingGraph.Controllers
             if(resEnc.Count > 0)
             {
                 // 2. Get all People by Query
-                List<Person> resUsr = repo.Read<Person>(sqm.GetPersonQuery());
+                List<Person> resUsr = repo.ReadQuery<Person>("GetAllPeople");
 
                 // 3. Substitute resEnc.Person with a subset of resUsr for COVID Health Level
                 if(resUsr.Count > 0)
@@ -59,7 +56,7 @@ namespace ContactTracingGraph.Controllers
                 return NotFound();
 
             // 2. Get all People by Query
-            List<Person> resUsr = repo.Read<Person>(sqm.GetPersonQuery());
+            List<Person> resUsr = repo.ReadQuery<Person>("GetAllPeople");
 
             // 3. Substitute Obj.Person with a subset of resUsr for COVID Health Level
             if (resUsr.Count > 0)
@@ -89,7 +86,7 @@ namespace ContactTracingGraph.Controllers
 
         public IActionResult Delete([FromODataUri] string key)
         {
-            return repo.Delete(new Uri($"{CRT.Namespace}{key}")) ? (IActionResult) Ok() : NotFound();
+            return repo.Delete(key) ? (IActionResult) Ok() : NotFound();
         }
     }
 }

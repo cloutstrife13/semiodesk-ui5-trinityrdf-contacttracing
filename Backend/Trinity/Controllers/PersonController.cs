@@ -5,7 +5,6 @@ using Microsoft.AspNet.OData;
 using Microsoft.AspNet.OData.Routing;
 using Microsoft.AspNetCore.Mvc;
 using System;
-using ContactTracingGraph.Queries;
 using System.Collections.Generic;
 using System.Linq;
 
@@ -15,25 +14,23 @@ namespace ContactTracingGraph.Controllers
     public class PersonController : ODataController
     {
         private readonly TrinityRepository<Person> repo;
-        private readonly SparqlQueryManager sqm;
 
         public PersonController(DbContext trinity)
         {
             repo = new TrinityRepository<Person>(trinity.DefaultModel);
-            sqm = new SparqlQueryManager();
         }
 
         [EnableQuery]
         public IActionResult Get()
         {
-            return Ok(repo.Read(sqm.GetPersonQuery()));
+            return Ok(repo.ReadQuery("GetAllPeople"));
         }
 
         [EnableQuery]
         public IActionResult Get(string key)
         {
-            List<Person> r = repo.Read(sqm.GetPersonByIdQuery(key));
-            return (r.Count < 1) ? (IActionResult) NotFound() : Ok(r.First());
+            Person Obj = repo.ReadQuery("GetPersonById", key);
+            return (Obj is null) ? (IActionResult) NotFound() : Ok(Obj);
         }
 
         public IActionResult Post([FromBody]dynamic Obj)
@@ -51,7 +48,7 @@ namespace ContactTracingGraph.Controllers
 
         public IActionResult Delete([FromODataUri] string key)
         {
-            return repo.Delete(new Uri($"{CRT.Namespace}{key}")) ? (IActionResult)Ok() : NotFound();
+            return repo.Delete(key) ? (IActionResult)Ok() : NotFound();
         }
 
         [HttpPost, ODataRoute("SubmitDiagnosis")]

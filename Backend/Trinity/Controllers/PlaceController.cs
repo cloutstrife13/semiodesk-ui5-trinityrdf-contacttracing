@@ -46,7 +46,7 @@ namespace ContactTracingGraph.Controllers
 
         public IActionResult Delete([FromODataUri] string key)
         {
-            return repo.Delete(new Uri($"{CRT.Namespace}{key}")) ? (IActionResult) Ok() : NotFound();
+            return repo.Delete(key) ? (IActionResult) Ok() : NotFound();
         }
     }
 }

@@ -5,7 +5,7 @@ sap.ui.define([
     "use strict";
     const client = new ODataGateway();
 
-    return Object.extend("semiodesk.ui5.covidtracker.service.ODataModel", {
+    return Object.extend("semiodesk.ui5.covidtracker.service.ODataHandler", {
         Create: (entityType, entityBody) => {
             return client.IssueRequestToClient({
                 "requestType": "POST",
@@ -13,7 +13,6 @@ sap.ui.define([
                 "entityBody": entityBody
             });
         },
-
         Read: (entityType, query = {}) => {
             return client.IssueRequestToClient({
                 "requestType": "GET",
@@ -21,7 +20,6 @@ sap.ui.define([
                 "query": query
             });
         },
-
         Update: (entityType, entityBody, entityID) => {
             return client.IssueRequestToClient({
                 "requestType": "PUT",
@@ -30,7 +28,6 @@ sap.ui.define([
                 "entityID": entityID
             });
         },
-
         Delete: (entityType, entityID) => {
             return client.IssueRequestToClient({
                 "requestType": "DELETE",

@@ -21,8 +21,8 @@ namespace ContactTracingGraph
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
+            // Adds the relevant dependencies such as Newtonsoft.Json, Trinity and OData to the container. 
             services.AddControllers().AddNewtonsoftJson();
-
             services.AddOData();
 
             services.AddScoped<DbContext>();
@@ -39,13 +39,11 @@ namespace ContactTracingGraph
             }
 
             app.UseHttpsRedirection();
-
             app.UseRouting();
-
-            app.UseODataBatching();
-
             app.UseAuthorization();
 
+            // The following lines enable OData and its batching capabilities for HTTP routing.
+            app.UseODataBatching();
             app.UseEndpoints(endpoints =>
             {
                 endpoints.MapControllers(); 
