@@ -1,5 +1,5 @@
 # COVID-19 RDF Tracker Simulation
-Disclaimer: This is just a simulation and does not propose a competitive alternative to existing Contact Tracing apps.
+**Disclaimer: This is just a simulation and does not propose a competitive alternative to existing Contact Tracing apps.**
 
 There are several **Contact Tracing** apps like *Corona-Warn-App (CWA)*, *COVID Tracker Ireland* or *Smittestopp* which take advantage of the Bluetooth-based Exposure Logging feature for exchanging anonymous digital identities for anticipating and mitigating potential infection chains.
 
