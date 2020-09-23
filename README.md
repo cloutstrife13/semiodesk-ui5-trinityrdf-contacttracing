@@ -1,4 +1,6 @@
 # COVID-19 RDF Tracker Simulation
+Disclaimer: This is just a simulation and does not propose a competetive alternative to existing Contact Tracing apps.
+
 There are several **Contact Tracing** apps like *Corona-Warn-App (CWA)*, *COVID Tracker Ireland* or *Smittestopp* which take advantage of the Bluetooth-based Exposure Logging feature for exchanging anonymous digital identities for anticipating and mitigating potential infection chains.
 
 This **COVID-19 RDF Tracker** application simulates such use case based on a **Semantic Graph Database** where its pattern matching capabilities with **SPARQL** can predicate whether or not users are endangered based on their recent encounters with others. This simulation allows you to select fictional user entities for the purpose of either marking them as *infected* or create an encounter with other users to demonstrate the effectiveness of **Linked Data** for identifying potentially endangered users.
@@ -11,7 +13,11 @@ This **COVID-19 RDF Tracker** application simulates such use case based on a **S
  - OpenLink Virtuoso
  
 ## Deployment
-To deploy the app, it is important that OpenLink Virtuoso is installed and running on your PC or Docker as the backend is dependent on it. Attached to this repository are several batch files for installing the relevant dependencies. Once that has been considered, the application can be launched with the provided **'Run App.bat'** file for initializing the OData V4 Client microservice, the Linked Data Server and the OpenUI5 frontend simultaneously. Trinity RDF ensures that the provided dataset is automatically uploaded to OpenLink Virtuoso upon its initialization. That means that you don't need to worry about making any post-installation configurations for OpenLink Virtuoso.
+To deploy the app, it is important that OpenLink Virtuoso is installed and running on your PC or Docker as the backend is dependent on it. Attached to this repository are several batch files for installing the relevant dependencies.
+
+Once that has been considered, the application can be launched with the provided **'Run App.bat'** file for initializing the OData V4 Client microservice, the Linked Data Server and the OpenUI5 frontend simultaneously.
+
+Trinity RDF ensures that the provided dataset is automatically uploaded to OpenLink Virtuoso upon its initialization. That means that you don't need to worry about making any post-installation configurations for OpenLink Virtuoso.
 
 ## Using the App
 Once the application is deployed, the frontend service can be accessed via http://localhost:3000/. After accessing it, a list of fictional users will appear whose *COVID Health Status* are displayed as *No risk*.
